@@ -6,8 +6,9 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <!-- audio source: http://soundbible.com/951-Nightime.html -->
     <audio controls autoplay loop>
-      <source src="assets/audio/background.mp3" type="audio/ogg">
+      <source src="@/assets/audio/nighttime.mp3" type="audio/ogg">
     </audio>
   </div>
 </template>
