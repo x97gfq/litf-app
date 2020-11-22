@@ -2,9 +2,11 @@
   <div id="app" class="bg">
     <router-view/>
     <div id="nav">
-      <h4>Light in the Forest</h4>
+      <!--<h4>Light in the Forest</h4>-->
+      <!--
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      -->
     </div>
     <audio controls autoplay loop>
       <source src="@/assets/audio/forest.mp3" type="audio/ogg">
@@ -18,32 +20,27 @@ body, html {
   margin: 0px;
 }
 .bg {
-  background-image: url('~@/assets/backgrounds/Forest.png');
   height: 100%;
-  background-repeat: repeat-x;
-  background-size: contain;
+  background-color: black;
 }
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
-
 #nav {
   width: 100%;
   position: absolute; 
   padding-bottom: 10px;
   bottom: 0;
-  background-color: #faf6a2;
+  background-color: #000000;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #ffffff;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: yellow;
     }
   }
 }
