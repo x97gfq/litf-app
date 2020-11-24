@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <LightInTheForest msg="Welcome to Your Vue.js App"/>
+    <LightInTheForest msg="Welcome to Light in the Forest"/>
   </div>
 </template>
 
