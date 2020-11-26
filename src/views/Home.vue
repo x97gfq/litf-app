@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <LightInTheForest msg="Welcome to Light in the Forest"/>
+    <LightInTheForest msg="It is dark."/>
   </div>
 </template>
 
