@@ -25,7 +25,7 @@ export default {
     async getAnimals () {
       this.loading = true;
       try {
-        axios.get('http://litf-api.azurewebsites.net/api/animals')
+        axios.get('https://litf-api.azurewebsites.net/api/animals')
           .then(response => {
             this.animals = response.data
           })
