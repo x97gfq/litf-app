@@ -2,6 +2,7 @@
   <div id="app" class="bg">
     <router-view/>
     <div id="nav">
+      <!--<router-link to="/">Home</router-link> |-->
       <!--<h4>Light in the Forest</h4>-->
       <!--
       <router-link to="/">Home</router-link> |
