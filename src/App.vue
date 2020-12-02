@@ -9,9 +9,6 @@
       <router-link to="/about">About</router-link>
       -->
     </div>
-    <audio controls autoplay loop>
-      <source src="@/assets/audio/forest.mp3" type="audio/ogg">
-    </audio>
   </div>
 </template>
 
