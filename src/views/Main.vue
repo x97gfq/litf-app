@@ -1,31 +1,57 @@
 <template>
   <div class="main">
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <img src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p><router-link to="/">Back to Intro</router-link></p>
 
-    <audio controls autoplay loop>
-      <source src="@/assets/audio/forest.mp3" type="audio/ogg">
-    </audio>
+    <table class="eyes">
+      <tr>
+        <td>
+          <br/>
+          <br/>
+          <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
+        </td>
+        <td>
+          <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
+        </td>
+        <td>
+          <br/>
+          <br/>
+          <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
+        </td>
+        <td>
+          <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
+        </td>
+        <td>
+          <br/>
+          <br/>
+          <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
+        </td>
+        <td>
+          <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
+        </td>
+        <td>
+          <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
+        </td>
+      </tr>
+    </table>
 
+    <div class="bottom_nav">
+      <p><router-link to="/">Back to Intro</router-link></p>
+      <audio controls autoplay loop>
+        <source src="@/assets/audio/forest.mp3" type="audio/ogg">
+      </audio>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped="true">
+.eye {
+  width: 150px;
+}
+.eyes { 
+  position: absolute; 
+  width: 100%;
+  bottom: 150px; 
+  margin: auto;
+}
 .main {
   background-image: url('~@/assets/backgrounds/Forest.png');
   height: 100%;
@@ -34,6 +60,12 @@
 }
 a { 
   color: white;
+}
+.bottom_nav {
+  position: absolute; 
+  bottom: 20px; 
+  width: 100%;
+  margin: auto;
 }
 </style>
 

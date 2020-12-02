@@ -1,16 +1,17 @@
 <template>
-  <div class="message">
-
-    <div class="message_text">
-      <h3>{{ title }}</h3>
-      <h3>{{ subtitle }}</h3>
-      <p><router-link to="/Main">Enter</router-link></p>
+  <div>
+    <div class="message">
+      <div class="message_text">
+        <h3>{{ title }}</h3>
+        <h3>{{ subtitle }}</h3>
+      </div>
     </div>
-
-    <audio controls autoplay>
-      <source src="@/assets/audio/1. Judy - It is Dark.wav" type="audio/ogg">
-    </audio>
-
+    <div class="bottom_nav">
+      <p><router-link to="/Main">Enter</router-link></p>
+      <audio controls autoplay>
+        <source src="@/assets/audio/1. Judy - It is Dark.wav" type="audio/ogg">
+      </audio>
+    </div>
   </div>
 </template>
 
@@ -45,5 +46,11 @@ div.message .message_text {
 a {
   color: white;
   font-size: 14pt;
+}
+.bottom_nav {
+  position: absolute; 
+  bottom: 20px; 
+  width: 100%;
+  margin: auto;
 }
 </style>
