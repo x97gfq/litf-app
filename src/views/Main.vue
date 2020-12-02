@@ -27,9 +27,6 @@
         <td>
           <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
         </td>
-        <td>
-          <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
-        </td>
       </tr>
     </table>
 
