@@ -2,8 +2,8 @@
   <div>
     <div class="message">
       <div class="message_text">
-        <h3>{{ title }}</h3>
-        <h3>{{ subtitle }}</h3>
+        <h3 id="msg1" style="display: none; font-size: 32pt !important; font-family: Baskerville;">{{ title }}</h3>
+        <h3 id="msg2" style="display: none; font-size: 32pt !important; font-family: Baskerville;">{{ subtitle }}</h3>
       </div>
     </div>
     <div class="bottom_nav">
@@ -16,12 +16,18 @@
 </template>
 
 <script>
+import $ from 'jquery'
+
 export default {
   name: 'LightInTheForestIntro',
   props: {
     title: String,
     subtitle: String
-  }
+  },
+  mounted(){
+    $("#msg1").fadeIn(4000);
+    $("#msg2").fadeIn(10000);
+  }  
 }
 </script>
 
@@ -42,6 +48,7 @@ div.message .message_text {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+  width: 300px;
 }
 a {
   color: white;

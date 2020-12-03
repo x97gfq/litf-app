@@ -6,8 +6,9 @@
         <td>
           <br/>
           <br/>
-          <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
+          <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes" onclick="function() { alert('you clicked an animal');}"/>
         </td>
+        <!--
         <td>
           <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
         </td>
@@ -26,7 +27,7 @@
         </td>
         <td>
           <img class="eye" src="@/assets/eyes/blinking_eyes_test.gif" alt="blinking animal eyes"/>
-        </td>
+        </td>-->
       </tr>
     </table>
 
