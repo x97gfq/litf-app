@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="bottom_nav">
-      <p><router-link to="/Main">Enter</router-link></p>
+      <p><router-link to="/Main">Enter</router-link> <router-link to="/Lastpage">Last Page</router-link></p>
       <audio controls autoplay>
         <source src="@/assets/audio/1. Judy - It is Dark.wav" type="audio/ogg">
       </audio>
