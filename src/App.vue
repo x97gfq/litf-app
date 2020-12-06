@@ -1,14 +1,6 @@
 <template>
   <div id="app" class="bg">
     <router-view/>
-    <div id="nav">
-      <!--<router-link to="/">Home</router-link> |-->
-      <!--<h4>Light in the Forest</h4>-->
-      <!--
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-      -->
-    </div>
   </div>
 </template>
 
@@ -27,19 +19,22 @@ body, html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-#nav {
-  width: 100%;
+#enterLink {
+  font-family: Baskerville;
+  padding-top: 30px;
+  font-size: 18pt;
+}
+.bottom_nav {
+  font-family: Baskerville;
+  font-size: 12pt;
   position: absolute; 
-  padding-bottom: 10px;
-  bottom: 0;
-  background-color: #000000;
-  a {
-    font-weight: bold;
-    color: #ffffff;
-
-    &.router-link-exact-active {
-      color: yellow;
-    }
-  }
+  bottom: 20px; 
+  width: 100%;
+  margin: auto;
+}
+a {
+  color: white;
 }
 </style>
+
+

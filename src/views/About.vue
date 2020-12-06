@@ -6,7 +6,9 @@
     <br/>
     <br/>
     <br/>
-    <p><router-link to="/">Back to Intro</router-link></p>
+    <p>
+      <router-link to="/">Home</router-link>
+    </p>
   </div>
 </template>
 

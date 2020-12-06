@@ -1,21 +1,38 @@
 <template>
   <div class="home">
-    <LightInTheForestIntro title="It is dark." subtitle="Don't be afraid, there is light in the forest."/>
+    <img id="coverimg" src="@/assets/images/Lightintheforest_cover.jpg" v-on:click="goToIntro()"/>
+    <p id="enterLink">
+      <router-link to="/Intro">Start</router-link>
+    </p>
   </div>
 </template>
 
+<style scoped lang="scss">
+.home {
+  color: rgb(251,288,64);
+}
+#coverimg {
+  border-radius: 20%;
+  -moz-border-radius: 20%;
+  -webkit-border-radius: 20%;
+  display: none;
+  width: 40%;
+  padding-top: 40px;
+}
+</style>
+
 <script>
-// @ is an alias to /src
-import LightInTheForestIntro from '@/components/LightInTheForestIntro.vue'
+import $ from 'jquery'
 
 export default {
   name: 'Home',
-  components: {
-    LightInTheForestIntro
-  },
   methods:{
+    goToIntro() {
+      this.$router.push({path: "/Intro"});
+    },
   },
-  beforeMount(){
-  }  
+  mounted(){
+    $("#coverimg").fadeIn(4000);
+  }
 }
 </script>

@@ -11,17 +11,22 @@ const routes = [
     component: Home
   },
   {
-    path: '/main',
-    name: 'Main',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Main.vue')
+    path: '/intro',
+    name: 'Intro',
+    component: () => import(/* webpackChunkName: "intro" */ '../views/Intro.vue')
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/nighttime',
+    name: 'Nighttime',
+    component: () => import(/* webpackChunkName: "nighttime" */ '../views/Nighttime.vue')
   },
   {
     path: '/lastpage',
+    name: 'Lastpage',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Lastpage.vue')
+  },
+  {
+    path: '/about',
     name: 'Lastpage',
     component: () => import(/* webpackChunkName: "about" */ '../views/Lastpage.vue')
   }
