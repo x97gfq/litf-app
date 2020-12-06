@@ -1,5 +1,12 @@
 <template>
   <div class="nighttime">
+    
+    <!-- https://euvl.github.io/vue-js-modal/Intro.html#dynamic-modals -->
+    <modal name="animal-modal">
+        <div style="width: 100%; height: 100%; background-color: black; color: yellow;">
+          Animal popup
+        </div>
+    </modal>
 
     <table class="eyes">
       <tr>
@@ -8,7 +15,7 @@
           src="@/assets/eyes/blinking_eyes_test.gif"
           v-bind:alt="animal.name" 
           v-bind:title="animal.name" 
-          v-on:click="showAnimal(animal)"/>
+          v-on:click="showAnimal(animal)" style="cursor: pointer;"/>
         </td>
       </tr>
     </table>
@@ -58,7 +65,13 @@ export default {
   methods:{
     showAnimal(animal) {
       console.log("show animal: " + animal.name)
-      alert("show animal: " + animal.name)
+      this.show()
+    },
+    show () {
+        this.$modal.show('animal-modal');
+    },
+    hide () {
+        this.$modal.hide('animal-modal');
     },
     async getAnimals () {
       this.loading = true;
