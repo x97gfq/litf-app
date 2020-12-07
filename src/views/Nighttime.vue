@@ -4,7 +4,7 @@
     <table class="eyes">
       <tr>
         <td v-for="(animal, index) in animals" :key="animal.id" style="width: 10%;">
-          <img class="eye" 
+          <img 
           v-bind:class="classNameByIndex(index)"
           v-bind:src="require('../assets/eyes/' + animal.eyes)"
           v-bind:alt="animal.name" 
