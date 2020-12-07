@@ -26,10 +26,17 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
+<<<<<<< HEAD
     path: '/lastpage',
     name: 'Lastpage',
     component: () => import(/* webpackChunkName: "about" */ '../views/Lastpage.vue')
   }
+=======
+    path: '/contributors',
+    name: 'Contributors',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Contributors.vue')
+  },
+>>>>>>> contributors
 ]
 
 const router = new VueRouter({
