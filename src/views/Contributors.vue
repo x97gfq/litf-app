@@ -1,21 +1,26 @@
 <template>
   <div class="contributors">
     <h1>Contributors</h1>
-    <div class = "names">
-      <div class="product_management">
+    <br>
+    <h3>Artist</h3>
+    <p>
+      Holly Carr
+    </p>
+    <div class = "student_names">
+      <div id="product_management">
         <h3>Project Management</h3>
         <ul>
           <li>Kelsey Rideout</li>
           <li>Liam Jacquet</li>
         </ul>
       </div>
-      <div class="product_manager">
+      <div id="product_manager">
         <h3>Product Manager</h3>
         <ul>
           <li>Zipeng Li</li>
         </ul>
       </div>
-      <div class="requirements_analysis">
+      <div id="requirements_analysis">
         <h3>Requirements Analysis</h3>
         <ul>
           <li>Riley Meyers</li>
@@ -33,7 +38,7 @@
           <li>Nic Oakley</li>
         </ul>
       </div>
-      <div class="design">
+      <div id="design">
         <h3>Design</h3>
         <ul>
           <li>Patrick Viscount</li>
@@ -43,14 +48,16 @@
           <li>Jenna Floyd</li>
         </ul>
         </div>
-      <div class="implementation">
+      <div id="implementation">
         <h3>Implementation</h3>
         <ul>
+          <li>Jamie Symonds</li>
+          <li>Terence Bungay</li>
           <li>Will Sladek</li>
           <li>Logan VanOostrum</li>
         </ul>
       </div>
-      <div class="qa">
+      <div id="qa">
         <h3>Quality Assurance</h3>
         <ul>
           <li>Allan Morykot</li>
@@ -70,9 +77,9 @@
   padding-top: 20px;
 }
 
-.names {
+.student_names {
   column-count: 2;
-  padding: 2% 25% 5% 25%;
+  padding: 1% 25% 5% 25%;
   text-align: center;
 }
 
@@ -83,7 +90,7 @@ ul{
   margin: 20px;
 }
 
-.requirements_analysis {
+#requirements_analysis {
   -webkit-column-break-inside: avoid;
 }
 </style>
