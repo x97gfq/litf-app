@@ -65,8 +65,11 @@
         </ul>
       </div>
     </div>
-
-    <p><router-link to="/">Back to Intro</router-link></p>
+    <div class="bottom_nav">
+      <p>
+        <router-link to="/">Home</router-link>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -75,6 +78,7 @@
 .contributors {
   color: white;
   padding-top: 20px;
+  font-family: Baskerville;
 }
 
 .student_names {

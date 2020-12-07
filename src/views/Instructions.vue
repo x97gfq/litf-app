@@ -6,9 +6,11 @@
     <br/>
     <br/>
     <br/>
-    <p>
-      <router-link to="/">Home</router-link>
-    </p>
+    <div class="bottom_nav">
+      <p>
+        <router-link to="/">Home</router-link>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -16,6 +18,7 @@
 .instructions {
   color: white;
   padding-top: 20px;
+  font-family: Baskerville;
 }
 </style>
 
