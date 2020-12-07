@@ -29,6 +29,11 @@ const routes = [
     path: '/lastpage',
     name: 'Lastpage',
     component: () => import(/* webpackChunkName: "about" */ '../views/Lastpage.vue')
+  },
+  {
+    path: '/instructions',
+    name: 'Instructions',
+    component: () => import(/* webpackChunkName: "instructions" */ '../views/Instructions.vue')
   }
 ]
 

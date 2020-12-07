@@ -13,6 +13,9 @@
       <p>
         <router-link to="/">Home</router-link>
       </p>
+      <p>
+        <router-link to="/">Instructions</router-link>
+      </p>
       <audio autoplay>
         <source src="@/assets/audio/1. Judy - It is Dark.wav" type="audio/ogg">
       </audio>
