@@ -4,6 +4,11 @@
     <p id="enterLink">
       <router-link to="/Intro">Start</router-link>
     </p>
+    <p id = "aboutlink">
+      <br>
+      <br>
+      <router-link to="/about">About</router-link>
+    </p>
   </div>
 </template>
 
