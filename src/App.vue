@@ -9,6 +9,12 @@ body, html {
   height: 100%;
   margin: 0px;
 }
+a {
+  color: white;
+}
+a:visited, a:hover {
+  color: whitesmoke;
+}
 .bg {
   height: 100%;
   background-color: black;

@@ -4,17 +4,16 @@
     <p id="enterLink">
       <router-link to="/Intro">Start</router-link>
     </p>
-    <p id = "aboutlink">
-      <br>
-      <br>
-      <router-link to="/about">About</router-link>
-    </p>
+    <div class="bottom_nav">
+      <router-link to="/about">About</router-link> | <router-link to="/instructions">Instructions</router-link> | <router-link to="/contributors">Conributors</router-link> | Sponsors
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .home {
   color: rgb(251,288,64);
+  font-family: Baskerville;
 }
 #coverimg {
   border-radius: 20%;
