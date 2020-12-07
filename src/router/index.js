@@ -28,7 +28,7 @@ const routes = [
   {
     path: '/lastpage',
     name: 'Lastpage',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Lastpage.vue')
+    component: () => import(/* webpackChunkName: "lastpage" */ '../views/Lastpage.vue')
   },
   {
     path: '/instructions',
