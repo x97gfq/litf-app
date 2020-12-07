@@ -21,12 +21,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "nighttime" */ '../views/Nighttime.vue')
   },
   {
-    path: '/lastpage',
-    name: 'Lastpage',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Lastpage.vue')
+    path: '/about',
+    name: 'About',
+    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/about',
+    path: '/lastpage',
     name: 'Lastpage',
     component: () => import(/* webpackChunkName: "about" */ '../views/Lastpage.vue')
   }

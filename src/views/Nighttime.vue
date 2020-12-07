@@ -1,18 +1,12 @@
 <template>
   <div class="nighttime">
     
-    <!-- https://euvl.github.io/vue-js-modal/Intro.html#dynamic-modals -->
-    <modal name="animal-modal">
-        <div style="width: 100%; height: 100%; background-color: black; color: yellow;">
-          Animal popup
-        </div>
-    </modal>
-
     <table class="eyes">
       <tr>
-        <td v-for="animal in animals" :key="animal.id" style="width: 10%;">
+        <td v-for="(animal, index) in animals" :key="animal.id" style="width: 10%;">
           <img class="eye" 
-          src="@/assets/eyes/blinking_eyes_test.gif"
+          v-bind:class="classNameByIndex(index)"
+          v-bind:src="require('../assets/eyes/' + animal.eyes)"
           v-bind:alt="animal.name" 
           v-bind:title="animal.name" 
           v-on:click="showAnimal(animal)" style="cursor: pointer;"/>
@@ -31,10 +25,14 @@
 
 <style scoped lang="scss">
 .eye {
-  width: 120px;
+  width: 80px;
+}
+.eye_lower {
+  width: 150px;
+  padding-top: 100px;
 }
 .eyes { 
-  top: 65%;
+  top: 50%;
   position: absolute; 
   width: 100%;
   bottom: 150px; 
@@ -50,6 +48,7 @@
 
 <script>
 import axios from 'axios'
+import AnimalComponent from '../components/Animal.vue'
 
 export default {
   name: 'Nighttime',
@@ -63,12 +62,24 @@ export default {
     }
   },
   methods:{
+    classNameByIndex: function (index) {
+      return index % 2 == (0 || 1) ? 'eye' : 'eye_lower';
+    },
     showAnimal(animal) {
       console.log("show animal: " + animal.name)
-      this.show()
+      this.show(animal)
     },
-    show () {
-        this.$modal.show('animal-modal');
+    show (animal) {
+      this.$modal.show(
+        AnimalComponent,
+        { 
+          animal_name: animal.name,
+          image: animal.image,
+          sound: animal.sound
+        },
+        { draggable: true }
+      )
+        //this.$modal.show('animal-modal');
     },
     hide () {
         this.$modal.hide('animal-modal');
