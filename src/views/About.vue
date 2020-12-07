@@ -2,6 +2,7 @@
   <div class="about">
     <h3>About</h3>
     <br/>
+    <router-link to="/contributors">Contributors</router-link>
     <br/>
     <br/>
     <br/>
