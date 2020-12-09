@@ -1,0 +1,13 @@
+{ 
+    "animals": 
+    [
+        {"id":1,"name":"raven","eyes":"raven_eyes.gif","image":"raven.jpg","sound":"raven.wav"},
+        {"id":2,"name":"wolf","eyes":"wolf_eyes.gif","image":"wolf.jpg","sound":"wolf.wav"},
+        {"id":3,"name":"deer","eyes":"deer_eyes.gif","image":"deer.jpg","sound":"deer.wav"},
+        {"id":4,"name":"rabbit","eyes":"rabbit_eyes.gif","image":"rabbit.jpg","sound":"rabbit.wav"},
+        {"id":5,"name":"owl","eyes":"owl_eyes.gif","image":"owl.jpg","sound":"owl.wav"},
+        {"id":6,"name":"fox","eyes":"fox_eyes.gif","image":"fox.jpg","sound":"fox.wav"},
+        {"id":7,"name":"bear","eyes":"bear_eyes.gif","image":"bear.jpg","sound":"bear.wav"},
+        {"id":8,"name":"lynx","eyes":"lynx_eyes.gif","image":"lynx.jpg","sound":"lynx.wav"}
+    ]
+}

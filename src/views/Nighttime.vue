@@ -16,7 +16,7 @@
 
     <div class="bottom_nav">
       <p><router-link to="/">Home</router-link></p>
-      <audio autoplay loop >
+      <audio autoplay loop id="forest_audio">
         <source src="@/assets/audio/forest.mp3" type="audio/ogg">
       </audio>
     </div>
@@ -47,8 +47,9 @@
 </style>
 
 <script>
-import axios from 'axios'
+//import axios from 'axios'
 import AnimalComponent from '../components/Animal.vue'
+import AnimalList from '../assets/json/animal_list.json'
 
 export default {
   name: 'Nighttime',
@@ -84,25 +85,17 @@ export default {
     hide () {
         this.$modal.hide('animal-modal');
     },
-    async getAnimals () {
-      this.loading = true;
-      try {
-        axios.get('https://litf-api.azurewebsites.net/api/animals')
-          .then(response => {
-            this.animals = response.data
-          })
-          .catch(error => {
-            console.log(error)
-            this.errored = true
-          })
-          .finally(() => {
-            this.loading = false
-          }
-        )
-      } catch (err) {
-        console.log(err);
-      }
+    getAnimals () {
+      this.animals = AnimalList.animals; //static import
+      this.animals.sort(function(){return 0.5 - Math.random()});
+    },
+    adjustSoundLevel(elementId, level) {
+      var aud = document.getElementById(elementId);
+      aud.volume = level;
     }
+  },
+  mounted() {
+    this.adjustSoundLevel('forest_audio',0.20);
   },
   beforeMount(){
     this.getAnimals()
