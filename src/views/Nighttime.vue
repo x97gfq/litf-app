@@ -1,34 +1,53 @@
 <template>
   <div class="nighttime">
-    
+  
+    <div v-if="checkIfDone" class="checkIfDone">
+        <div class="alert alert-success" role="alert">
+            You have clicked all of the animals 
+            <a href="#" v-on:click="startOver" style="cursor: pointer;" class="text-success">start over</a>
+        </div>            
+    </div>
+
     <table class="eyes">
       <tr>
         <td v-for="(animal, index) in animals" :key="animal.id" style="width: 10%;">
+
           <img 
+          v-if="animal.eye_state == 'blink'"
           v-bind:class="classNameByIndex(index)"
           v-bind:src="require('../assets/eyes/' + animal.eyes)"
           v-bind:alt="animal.name" 
           v-bind:title="animal.name" 
           v-on:click="showAnimal(animal)" style="cursor: pointer;"/>
+
+          <img 
+          v-if="animal.eye_state == 'open'"
+          v-bind:class="classNameByIndex(index)"
+          v-bind:src="require('../assets/eyes/' + animal.eyes_open)"
+          v-bind:alt="animal.name" 
+          v-bind:title="animal.name" 
+          v-on:click="showAnimal(animal)" style="cursor: pointer;"/>
+
         </td>
       </tr>
     </table>
 
     <div class="bottom_nav">
-      <p><router-link to="/">Home</router-link></p>
+      <p>
+         <router-link to="/">Home</router-link>
+      </p>
       <audio autoplay loop id="forest_audio">
         <source src="@/assets/audio/forest.mp3" type="audio/ogg">
       </audio>
+      <div style="background-color: gray; color: yellow; width: 30%;">
+          <span>{{ animalsClicked }}</span>
+      </div>      
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.eye {
-  width: 80px;
-}
 .eye_lower {
-  width: 150px;
   padding-top: 100px;
 }
 .eyes { 
@@ -44,12 +63,18 @@
   background-repeat: repeat-x;
   background-size: contain;
 }
+.checkIfDone {
+  padding: 20px; 
+  width: 400px; 
+  margin: auto; 
+  padding-top: 100px;  
+}
 </style>
 
 <script>
-//import axios from 'axios'
 import AnimalComponent from '../components/Animal.vue'
 import AnimalList from '../assets/json/animal_list.json'
+import $ from 'jquery'
 
 export default {
   name: 'Nighttime',
@@ -62,12 +87,34 @@ export default {
       errored: false
     }
   },
+  computed: {
+    animalsClicked() {
+        let animalList = '';
+        $.each(this.animals, function(key, animal) {
+            if (animal.eye_state === 'open') animalList += (animalList != '' ? ', ' : '') + animal.name;
+        });
+        return animalList;
+    },
+    checkIfDone() {
+        let done = true;
+        $.each(this.animals, function(key, animal) {
+            if (animal.eye_state === 'blink') done = false;
+        });
+        return done;
+    }
+  },
   methods:{
+    startOver: function() {
+        $.each(this.animals, function(key, animal) {
+            animal.eye_state = 'blink';
+        });
+    },
     classNameByIndex: function (index) {
       return index % 2 == (0 || 1) ? 'eye' : 'eye_lower';
     },
     showAnimal(animal) {
-      console.log("show animal: " + animal.name)
+      animal.eye_state = 'open';
+      console.log('show animal: ' + animal.name)
       this.show(animal)
     },
     show (animal) {

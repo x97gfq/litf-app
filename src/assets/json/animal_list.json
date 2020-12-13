@@ -1,13 +1,76 @@
-{ 
-    "animals": 
-    [
-        {"id":1,"name":"raven","eyes":"raven_eyes.gif","image":"raven.jpg","sound":"raven.wav"},
-        {"id":2,"name":"wolf","eyes":"wolf_eyes.gif","image":"wolf.jpg","sound":"wolf.wav"},
-        {"id":3,"name":"deer","eyes":"deer_eyes.gif","image":"deer.jpg","sound":"deer.wav"},
-        {"id":4,"name":"rabbit","eyes":"rabbit_eyes.gif","image":"rabbit.jpg","sound":"rabbit.wav"},
-        {"id":5,"name":"owl","eyes":"owl_eyes.gif","image":"owl.jpg","sound":"owl.wav"},
-        {"id":6,"name":"fox","eyes":"fox_eyes.gif","image":"fox.jpg","sound":"fox.wav"},
-        {"id":7,"name":"bear","eyes":"bear_eyes.gif","image":"bear.jpg","sound":"bear.wav"},
-        {"id":8,"name":"lynx","eyes":"lynx_eyes.gif","image":"lynx.jpg","sound":"lynx.wav"}
+{
+    "animals": [
+      {
+        "id": 1,
+        "name": "deer",
+        "eyes": "deer_eyes.gif",
+        "eyes_open": "deer_eyes_open.png",
+        "eye_state": "blink",
+        "image": "deer.jpg",
+        "sound": "deer.wav"
+      },
+      {
+        "id": 2,
+        "name": "owl",
+        "eyes": "owl_eyes.gif",
+        "eyes_open": "owl_eyes_open.png",
+        "eye_state": "blink",
+        "image": "owl.jpg",
+        "sound": "owl.wav"
+      },
+      {
+        "id": 3,
+        "name": "bear",
+        "eyes": "bear_eyes.gif",
+        "eyes_open": "bear_eyes_open.png",
+        "eye_state": "blink",
+        "image": "bear.jpg",
+        "sound": "bear.wav"
+      },
+      {
+        "id": 4,
+        "name": "lynx",
+        "eyes": "lynx_eyes.gif",
+        "eyes_open": "lynx_eyes_open.png",
+        "eye_state": "blink",
+        "image": "lynx.jpg",
+        "sound": "lynx.wav"
+      },
+      {
+        "id": 5,
+        "name": "raven",
+        "eyes": "raven_eyes.gif",
+        "eyes_open": "raven_eyes_open.png",
+        "eye_state": "blink",
+        "image": "raven.jpg",
+        "sound": "raven.wav"
+      },
+      {
+        "id": 6,
+        "name": "fox",
+        "eyes": "fox_eyes.gif",
+        "eyes_open": "fox_eyes_open.png",
+        "eye_state": "blink",
+        "image": "fox.jpg",
+        "sound": "fox.wav"
+      },
+      {
+        "id": 7,
+        "name": "wolf",
+        "eyes": "wolf_eyes.gif",
+        "eyes_open": "wolf_eyes_open.png",
+        "eye_state": "blink",
+        "image": "wolf.jpg",
+        "sound": "wolf.wav"
+      },
+      {
+        "id": 8,
+        "name": "rabbit",
+        "eyes": "rabbit_eyes.gif",
+        "eyes_open": "rabbit_eyes_open.png",
+        "eye_state": "blink",
+        "image": "rabbit.jpg",
+        "sound": "rabbit.wav"
+      }
     ]
-}
+  }

@@ -34,7 +34,7 @@ a:visited, a:hover {
   font-family: Baskerville;
   font-size: 12pt;
   position: absolute; 
-  bottom: 20px; 
+  bottom: 0px; 
   width: 100%;
   margin: auto;
 }
