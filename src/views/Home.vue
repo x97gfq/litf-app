@@ -5,7 +5,7 @@
       <router-link to="/Intro">Start</router-link>
     </p>
     <div class="bottom_nav">
-      <router-link to="/about">About</router-link> | <router-link to="/instructions">Instructions</router-link> | <router-link to="/contributors">Contributors</router-link> | Sponsors
+      <router-link to="/about">About</router-link> | <router-link to="/instructions">Instructions</router-link> | <router-link to="/contributors">Contributors</router-link> | <router-link to="/sponsors">Sponsors</router-link>
     </div>
   </div>
 </template>
