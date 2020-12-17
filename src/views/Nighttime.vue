@@ -32,6 +32,17 @@
       </tr>
     </table>
 
+    <div class = heart>
+
+      <img
+      src = "@/assets/images/greenhearttransparent2.png"
+      height = "50"
+      width = "50"
+      v-on:click="showInfo()" style="cursor: pointer;"
+      />
+
+    </div>    
+
     <div class="bottom_nav">
       <p>
          <router-link to="/">Home</router-link>
@@ -69,10 +80,15 @@
   margin: auto; 
   padding-top: 100px;  
 }
+.heart {
+  padding-top: 350px;
+  padding-left: 75%;
+}
 </style>
 
 <script>
 import AnimalComponent from '../components/Animal.vue'
+import GreenHeartComponent from '../components/GreenHeart.vue'
 import AnimalList from '../assets/json/animal_list.json'
 import $ from 'jquery'
 
@@ -139,6 +155,15 @@ export default {
     adjustSoundLevel(elementId, level) {
       var aud = document.getElementById(elementId);
       aud.volume = level;
+    },
+    showInfo () {
+        this.$modal.show(
+          GreenHeartComponent,
+          {
+
+          },
+          {draggable: true}
+        )
     }
   },
   mounted() {
