@@ -12,6 +12,7 @@
 
         <p>Sponsor3</p>
         <br/>
+        <br/>
 
     <router-link to="/contributors">Contributors</router-link>
     <br/>
