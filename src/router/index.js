@@ -49,6 +49,10 @@ const routes = [
     path: '/shop',
     name: 'Shop',
     component: () => import(/* webpackChunkName: "contributors" */ '../views/Shop.vue')
+  },{
+    path: '/mhw',
+    name: 'MHW',
+    component: () => import(/* webpackChunkName: "contributors" */ '../views/MHW.vue')
   },
   {
     path: '/sponsors',
