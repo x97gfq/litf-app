@@ -34,13 +34,14 @@
 
     <div class="bottom_nav">
       <p>
-         <router-link to="/">Home</router-link>
+         <router-link to="/">Home</router-link> | 
+         <router-link to="/Daytime">(daytime preview)</router-link>
       </p>
       <audio autoplay loop id="forest_audio">
         <source src="@/assets/audio/forest.mp3" type="audio/ogg">
       </audio>
-      <div style="background-color: gray; color: yellow; width: 30%;">
-          <span>{{ animalsClicked }}</span>
+      <div v-if="animalsClicked != null && animalsClicked.length > 0" style="background-color: gray; color: yellow; width: 30%;">
+          Viewed: <span>{{ animalsClicked }}</span>
       </div>      
     </div>
   </div>
