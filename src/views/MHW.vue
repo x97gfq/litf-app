@@ -1,5 +1,5 @@
 <template>
-    <div class="shop">
+    <div class="mhw">
         <h3>Visit these mental health resources :</h3>
         
     <br/>
@@ -24,7 +24,7 @@
 </template>
 
 <style lang="scss" scoped>
-.shop {
+.mhw {
   color: white;
   padding-top: 20px;
   font-family: Baskerville;
