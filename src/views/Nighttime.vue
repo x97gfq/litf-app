@@ -4,7 +4,11 @@
     <div v-if="checkIfDone" class="checkIfDone">
         <div class="alert alert-success" role="alert">
             You have clicked all of the animals 
-            <a href="#" v-on:click="startOver" style="cursor: pointer;" class="text-success">start over</a>
+            <p class="text-success">
+              <b><router-link to="/Daytime" class="text-success">DAYTME REVEAL</router-link></b> | 
+              <a class="text-success" href="#" v-on:click="startOver" style="cursor: pointer;">Start Over</a> |
+              <router-link to="/" class="text-success">Home</router-link> 
+            </p>
         </div>            
     </div>
 

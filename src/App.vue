@@ -41,6 +41,10 @@ a:visited, a:hover {
 a {
   color: white;
 }
+/* hack */
+.vm--modal {
+  border-radius: 25px !important;
+}
 </style>
 
 

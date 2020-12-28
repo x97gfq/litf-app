@@ -1,4 +1,5 @@
 <template>
+  <div class="animal_bg">
     <div class="animal">
 
         <img @load="onImgLoad"
@@ -11,15 +12,13 @@
         <source v-bind:src="require('../assets/audio/' + sound)" type="audio/ogg">
       </audio>
     </div>
+  </div>
 </template>
 
 <style scoped>
-.animal {
+.animal_bg {
     background-color: black;
     color: rgb(251,288,64);
-}
-.animal_img {
-
 }
 </style>
 
@@ -36,8 +35,6 @@ export default {
   methods: {
     onImgLoad () {
       //this method is fired when the image has finished loading
-      $("#animal_reveal").fadeIn(3000);
-      
       var width = $("#animal_reveal").width();
       var height = $("#animal_reveal").height();
       
@@ -47,6 +44,9 @@ export default {
       var leftMargin = (viewportWidth > width ? ((viewportWidth-width)/2) : 50);
 
       $(".vm--modal").css({top:50, left: leftMargin, width: width, height: height });
+
+      $("#animal_reveal").fadeIn(3000);
+
     }
   },
 }
