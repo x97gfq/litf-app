@@ -1,10 +1,7 @@
 <template>
-    <div class="shop">
-        <h3>Shop page</h3>
-        <p>maybe some pictures here?</p>
-    <br/>
-        <p>Visit the page below to support the artist</p>
-        <a href="https://hollycarr.weebly.com/store.html" target="_blank">Holly's Shop</a>
+    <div class="mhw">
+        <h3>Visit these mental health resources :</h3>
+        
     <br/>
     <br/>
     <br/>
@@ -27,7 +24,7 @@
 </template>
 
 <style lang="scss" scoped>
-.shop {
+.mhw {
   color: white;
   padding-top: 20px;
   font-family: Baskerville;
