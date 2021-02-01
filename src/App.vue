@@ -48,3 +48,33 @@ a {
 </style>
 
 
+<script>
+export default {
+  name: 'App',
+  data () {
+    return {
+        location: null
+    }
+  },
+  methods:{
+    getGeoLocation() {
+        //do we support geolocation
+        if (!("geolocation" in navigator)) {
+            console.log("Geolocation is not available.");
+            return;
+        }
+
+        //get current position (latitude/longitude)
+        navigator.geolocation.getCurrentPosition(pos => {
+          this.location = pos;
+          console.log(this.location);
+        }, err => { 
+          console.log("Error Getting GeoLocation: " + err.message);
+        })
+    }
+  },
+  mounted(){
+    this.getGeoLocation();
+  }
+}
+</script>
