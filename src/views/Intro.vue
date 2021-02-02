@@ -58,9 +58,7 @@ export default {
   mounted(){
     $("#msg1").fadeIn(4000);
     $("#msg2").fadeIn(10000);
-    //setTimeout(function() {
-      $("#enterLink").fadeIn(16000);
-    //},3000);
-  }  
+    $("#enterLink").fadeIn(16000);
+  }
 }
 </script>

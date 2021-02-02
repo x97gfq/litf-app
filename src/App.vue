@@ -49,11 +49,11 @@ a {
 
 
 <script>
+
 export default {
   name: 'App',
   data () {
     return {
-        location: null
     }
   },
   methods:{
@@ -66,8 +66,12 @@ export default {
 
         //get current position (latitude/longitude)
         navigator.geolocation.getCurrentPosition(pos => {
-          this.location = pos;
+          //this.location = pos;
           console.log(this.location);
+
+          this.$store.commit("setLocation", pos);
+
+
         }, err => { 
           console.log("Error Getting GeoLocation: " + err.message);
         })
