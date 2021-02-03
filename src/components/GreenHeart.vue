@@ -22,25 +22,25 @@ export default {
   props: {
   
   },
-
   methods: {
 
   },
-  
   mounted() {
   
   },
   computed: {
     latitude() {
-      if (this.$store.state.location != null) {
-          return this.$store.state.location.coords.latitude;
+      var location = this.$store.getters.getLocation;
+      if (location != null) {
+          return location.coords.latitude;
       } else {
           return "";
       }
     },
     longitude() {
-      if (this.$store.state.location != null) {
-          return this.$store.state.location.coords.longitude;
+      var location = this.$store.getters.getLocation;
+      if (location != null) {
+          return location.coords.longitude;
       } else {
           return "";
       }
