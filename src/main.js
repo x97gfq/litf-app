@@ -18,17 +18,31 @@ Vue.config.productionTip = false
 
 const store = new Vuex.Store({
   state: {
-      location: null
+      location: null,
+      animal_list: [],
+      resource_list: []
   },
   getters: {
     getLocation() {
       return store.state.location;
+    },
+    getAnimalList() {
+      return store.state.animal_list;
+    },
+    getResourceList() {
+      return store.state.resource_list;
     }
   },
   mutations: {
-      setLocation(state, location) {
-          store.state.location = location;
-      }
+    setLocation(state, location) {
+        store.state.location = location;
+    },
+    setAnimalList(state, animal_list) {
+      store.state.animal_list = animal_list;
+    },
+    setResourceList(state, resource_list) {
+      store.state.resource_list = resource_list;
+    }
   }
 });
 

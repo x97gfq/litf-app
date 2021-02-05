@@ -5,8 +5,13 @@
       </p>
       <p>
         Current Latitude: {{ latitude }}<br/>
-        Current Longitude: {{ longitude }}
+        Current Longitude: {{ longitude }}<br/>
       </p>
+
+      <div v-for="(resource, index) in resources" :key="resource.id">
+        {{ index }} - {{ resource.name }}
+      </div>
+
     </div>
 </template>
 
@@ -15,18 +20,23 @@
 </style>
 
 <script>
-//import $ from 'jquery'
-
 export default {
   name: 'Heart',
   props: {
   
   },
+  data () {
+    return {
+      resources: []
+    }
+  },
   methods: {
-
+    getResources () {
+      this.resources = this.$store.getters.getResourceList;
+    }
   },
   mounted() {
-  
+    this.getResources();
   },
   computed: {
     latitude() {
@@ -48,4 +58,3 @@ export default {
   }
 }
 </script>
-

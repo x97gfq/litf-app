@@ -49,6 +49,8 @@ a {
 
 
 <script>
+import AnimalList from './assets/json/animal_list.json'
+import ResourceList from './assets/json/resource_list.json'
 
 export default {
   name: 'App',
@@ -57,7 +59,16 @@ export default {
     }
   },
   methods:{
-    getGeoLocation() {
+    setupAnimals () {
+      var list = AnimalList.animals;
+      list.sort(function(){return 0.5 - Math.random()});
+      this.$store.commit("setAnimalList", list);
+    },
+    setupResources () {
+      var list = ResourceList.resources;
+      this.$store.commit("setResourceList", list);
+    },
+    setupGeoLocation() {
         //do we support geolocation
         if (!("geolocation" in navigator)) {
             console.log("Geolocation is not available.");
@@ -71,14 +82,16 @@ export default {
 
           this.$store.commit("setLocation", pos);
 
-
         }, err => { 
           console.log("Error Getting GeoLocation: " + err.message);
         })
     }
   },
   mounted(){
-    this.getGeoLocation();
+    this.setupAnimals();
+    this.setupResources();
+    this.setupGeoLocation();
   }
 }
 </script>
+

@@ -94,7 +94,6 @@
 <script>
 import AnimalComponent from '../components/Animal.vue'
 import GreenHeartComponent from '../components/GreenHeart.vue'
-import AnimalList from '../assets/json/animal_list.json'
 import $ from 'jquery'
 
 export default {
@@ -154,8 +153,7 @@ export default {
         this.$modal.hide('animal-modal');
     },
     getAnimals () {
-      this.animals = AnimalList.animals; //static import
-      this.animals.sort(function(){return 0.5 - Math.random()});
+      this.animals = this.$store.getters.getAnimalList;
     },
     adjustSoundLevel(elementId, level) {
       var aud = document.getElementById(elementId);
