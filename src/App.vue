@@ -78,7 +78,7 @@ export default {
         //get current position (latitude/longitude)
         navigator.geolocation.getCurrentPosition(pos => {
           //this.location = pos;
-          console.log(this.location);
+          console.log(pos);
 
           this.$store.commit("setLocation", pos);
 

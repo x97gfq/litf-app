@@ -37,23 +37,23 @@ export default {
       // if location data is available
       //
       //
+      console.log(this.latitude); // <-- our current latitude
+      console.log(this.longitude); // <-- our current longitude
+      //
       //
       // iterate over resources and print the name of each
       this.resources.forEach(resource => {
         console.log(resource.name)
+        console.log(resource.latitude) /* this resource's latitude */
+        console.log(resource.longitude) /* this resource's longitude */
       });
       //
       //
-      //
-      // for now, use the first one in the list (position 0).
+      // for now, use the first resource in the list (assign resources[0] to selectedResource
       this.selectedResource = this.resources[0];
       //
       //
-      //
       console.log(this.selectedResource);
-      console.log(this.latitude);
-      console.log(this.longitude);
-      //
       //
       //
     }
