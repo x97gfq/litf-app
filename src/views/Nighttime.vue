@@ -4,8 +4,7 @@
     
       <div v-if="checkIfDone" class="checkIfDone">
           <div class="alert alert-success" role="alert">
-              You have clicked all of the animals 
-              <p class="text-success">
+              <p>You have clicked all of the animals 
                 <b><router-link to="/Daytime" class="text-success">DAYTME REVEAL</router-link></b> | 
                 <a class="text-success" href="#" v-on:click="startOver" style="cursor: pointer;">Start Over</a> |
                 <router-link to="/" class="text-success">Home</router-link> 
@@ -15,19 +14,9 @@
 
       <div class="eyes">
         <div class="eye_holder" v-for="(animal, index) in animals" :key="animal.id">
-
           <img 
-          v-if="animal.eye_state == 'blink'"
           v-bind:class="classNameByIndex(index)"
-          v-bind:src="require('../assets/eyes/' + animal.eyes)"
-          v-bind:alt="animal.name" 
-          v-bind:title="animal.name" 
-          v-on:click="showAnimal(animal)" style="cursor: pointer;"/>
-
-          <img 
-          v-if="animal.eye_state == 'open'"
-          v-bind:class="classNameByIndex(index)"
-          v-bind:src="require('../assets/eyes/' + animal.eyes_open)"
+          v-bind:src="require('../assets/eyes/' + (animal.eye_state == 'open' ? animal.eyes_open : animal.eyes))"
           v-bind:alt="animal.name" 
           v-bind:title="animal.name" 
           v-on:click="showAnimal(animal)" style="cursor: pointer;"/>
@@ -35,20 +24,18 @@
       </div>
 
       <div class = heart>
-
         <img
         src = "@/assets/images/greenhearttransparent2.png"
         height = "50"
         width = "50"
         v-on:click="showInfo()" style="cursor: pointer;"
         />
-
       </div>    
 
       <div class="bottom_nav">
         <p>
-          <router-link to="/">Home</router-link> | 
-          <router-link to="/Daytime">(daytime preview)</router-link>
+          <router-link to="/">Home</router-link><!-- | 
+          <router-link to="/Daytime">(daytime preview)</router-link>-->
         </p>
         <audio autoplay loop id="forest_audio">
           <source src="@/assets/audio/forest.mp3" type="audio/ogg">
@@ -112,7 +99,6 @@
 </style>
 
 <script>
-import AnimalComponent from '../components/Animal.vue'
 import GreenHeartComponent from '../components/GreenHeart.vue'
 import $ from 'jquery'
 
@@ -155,23 +141,8 @@ export default {
     },
     showAnimal(animal) {
       animal.eye_state = 'open';
-      console.log('show animal: ' + animal.name)
-      this.showModal(animal)
-    },
-    showModal(animal) {
-      this.$modal.show(
-        AnimalComponent,
-        { 
-          animal_name: animal.name,
-          image: animal.image,
-          sound: animal.sound
-        },
-        { draggable: true }
-      )
-        //this.$modal.show('animal-modal');
-    },
-    hide () {
-        this.$modal.hide('animal-modal');
+      console.log('show animal: ' + animal.name);
+      this.$parent.showModal(animal);
     },
     getAnimals () {
       this.animals = this.$store.getters.getAnimalList;
@@ -185,9 +156,7 @@ export default {
     showInfo () {
         this.$modal.show(
           GreenHeartComponent,
-          {
-
-          },
+          {},
           {draggable: true}
         )
     }

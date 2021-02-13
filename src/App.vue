@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="bg">
     <router-view/>
+    <AnimalModal v-show="isModalVisible" :animal="animal" @close="closeModal" />
   </div>
 </template>
 
@@ -47,18 +48,30 @@ a {
 }
 </style>
 
-
 <script>
 import AnimalList from './assets/json/animal_list.json'
 import ResourceList from './assets/json/resource_list.json'
+import AnimalModal from "./components/AnimalModal.vue";
 
 export default {
   name: 'App',
   data () {
     return {
+      isModalVisible: false,
+      animal: null
     }
   },
+  components: {
+    AnimalModal
+  },
   methods:{
+    showModal(animal) {
+      this.isModalVisible = true;
+      this.animal = animal;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    },  
     setupAnimals () {
       var list = AnimalList.animals;
       list.sort(function(){return 0.5 - Math.random()});
