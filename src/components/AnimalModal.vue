@@ -6,9 +6,17 @@ export default {
   },
   methods: {
     close() {
+      this.$refs.audio.pause();
       this.$emit("close");
+    },
+    playAnimalSound() {
+      console.log("playAnimalSound");
+      if (this.$refs.audio != null) {
+        this.$refs.audio.load();
+        this.$refs.audio.play();
+      }
     }
-  },
+  }
 };
 </script>
 
@@ -23,7 +31,7 @@ export default {
         v-bind:title="animal.name" 
         id="animal_reveal" class="animal_img"/>
 
-        <audio autoplay style="display: none;">
+        <audio ref="audio" autoplay style="display: none;">
           <source v-bind:src="require('../assets/audio/' + animal.sound)" type="audio/ogg">
         </audio>
 

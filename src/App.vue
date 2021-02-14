@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="bg">
     <router-view/>
-    <AnimalModal v-show="isModalVisible" :animal="animal" @close="closeModal" />
+    <AnimalModal ref="animalModal" v-show="isModalVisible" :animal="animal" @close="closeModal" />
   </div>
 </template>
 
@@ -68,6 +68,9 @@ export default {
     showModal(animal) {
       this.isModalVisible = true;
       this.animal = animal;
+      
+      var child = this.$refs.animalModal;
+      child.playAnimalSound();
     },
     closeModal() {
       this.isModalVisible = false;

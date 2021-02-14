@@ -37,9 +37,11 @@
           <router-link to="/">Home</router-link><!-- | 
           <router-link to="/Daytime">(daytime preview)</router-link>-->
         </p>
-        <audio autoplay loop id="forest_audio">
+
+        <audio autoplay loop ref="forest_audio">
           <source src="@/assets/audio/forest.mp3" type="audio/ogg">
         </audio>
+        
         <div v-if="animalsClicked != null && animalsClicked.length > 0" style="background-color: gray; color: yellow; width: 30%;">
             Viewed: <span>{{ animalsClicked }}</span>
         </div>      
@@ -147,12 +149,6 @@ export default {
     getAnimals () {
       this.animals = this.$store.getters.getAnimalList;
     },
-    adjustSoundLevel(elementId, level) {
-      if (document.getElementById(elementId) !== null) {
-        var aud = document.getElementById(elementId);
-        aud.volume = level;
-      }
-    },
     showInfo () {
         this.$modal.show(
           GreenHeartComponent,
@@ -163,7 +159,11 @@ export default {
   },
   mounted() {
     this.show = true;
-    this.adjustSoundLevel('forest_audio',0.20);
+      if (this.$refs.forest_audio != null) {
+        this.$refs.forest_audio.load();
+        this.$refs.forest_audio.volume = 0.20;
+        this.$refs.forest_audio.play();
+      }
   },
   beforeMount(){
     this.getAnimals()
