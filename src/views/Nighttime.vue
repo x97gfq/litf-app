@@ -42,9 +42,14 @@
           <source src="@/assets/audio/forest.mp3" type="audio/ogg">
         </audio>
         
-        <div v-if="animalsClicked != null && animalsClicked.length > 0" style="background-color: gray; color: yellow; width: 30%;">
-            Viewed: <span>{{ animalsClicked }}</span>
+        <div style="background-color: gray; color: yellow; width: 30%;">
+          <div v-for="(animal) in animals" :key="animal.id">
+              <div v-show="animal.eye_state == 'open'">
+                {{animal.name}}
+              </div>
+          </div>
         </div>      
+
       </div>
     </div>
   </transition>
@@ -117,6 +122,7 @@ export default {
     }
   },
   computed: {
+    /*
     animalsClicked() {
         let animalList = '';
         $.each(this.animals, function(key, animal) {
@@ -124,6 +130,7 @@ export default {
         });
         return animalList;
     },
+    */
     checkIfDone() {
         let done = true;
         $.each(this.animals, function(key, animal) {
