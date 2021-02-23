@@ -9,6 +9,7 @@
 body, html {
   height: 100%;
   margin: 0px;
+  font-family: Baskerville;
 }
 a {
   color: white;

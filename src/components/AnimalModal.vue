@@ -29,15 +29,14 @@ export default {
         v-bind:src="require('../assets/animals/' + animal.image)"
         v-bind:alt="animal.name" 
         v-bind:title="animal.name" 
-        id="animal_reveal" class="animal_img"/>
+        id="animal_reveal" 
+        class="animal_img" 
+        @click="close"/>
 
         <audio ref="audio" autoplay style="display: none;">
           <source v-bind:src="require('../assets/audio/' + animal.sound)" type="audio/ogg">
         </audio>
 
-        <button type="button" class="btn-green" @click="close">
-            Close
-        </button>
       </div>
     </div>
   </transition>

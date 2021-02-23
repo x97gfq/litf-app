@@ -4,10 +4,8 @@
     
       <div v-if="checkIfDone" class="checkIfDone">
           <div class="alert alert-success" role="alert">
-              <p>You have clicked all of the animals 
-                <b><router-link to="/Daytime" class="text-success">DAYTME REVEAL</router-link></b> | 
-                <a class="text-success" href="#" v-on:click="startOver" style="cursor: pointer;">Start Over</a> |
-                <router-link to="/" class="text-success">Home</router-link> 
+              <p>
+                <b><router-link to="/Daytime" class="text-success">GO TO THE DAYTME REVEAL</router-link></b> 
               </p>
           </div>            
       </div>
@@ -32,19 +30,21 @@
         />
       </div>    
 
-      <div class="bottom_nav">
-        <p>
-          <router-link to="/">Home</router-link><!-- | 
-          <router-link to="/Daytime">(daytime preview)</router-link>-->
-        </p>
+      <audio autoplay loop ref="forest_audio">
+        <source src="@/assets/audio/forest.mp3" type="audio/ogg">
+      </audio>
 
-        <audio autoplay loop ref="forest_audio">
-          <source src="@/assets/audio/forest.mp3" type="audio/ogg">
-        </audio>
+      <div class="bottom_nav">
+        <div style="width: 100%; text-align: center;">
+          <p>
+            <router-link to="/">Home</router-link>
+            <!--&nbsp;&nbsp;<a class="text-success" href="#" v-on:click="startOver" style="cursor: pointer;">Start Over</a>-->
+          </p>
+        </div>
         
-        <div style="background-color: gray; color: yellow; width: 30%;">
+        <div>
           <div v-for="(animal) in animals" :key="animal.id">
-              <div v-show="animal.eye_state == 'open'">
+              <div v-show="animal.eye_state == 'open'" class="progress_bar_item">
                 {{animal.name}}
               </div>
           </div>
@@ -56,6 +56,16 @@
 </template>
 
 <style scoped lang="scss">
+.progress_bar_item {
+  display: inline;
+  float: left;
+  width: 65px;
+  padding: 2px;
+  color: #000000;
+  background-color: #FE914A;
+  border-radius: 10px;
+  margin: 10px;
+}
 .eye_lower {
   padding-top: 100px;
 }
@@ -102,6 +112,10 @@
 }
 .v-leave-to { /* ending style */
   opacity: 0;
+}
+.alert {
+  font-family: Baskerville;
+  margin-top: 200px;
 }
 </style>
 

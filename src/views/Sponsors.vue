@@ -14,15 +14,14 @@
         <br/>
         <br/>
 
-    <router-link to="/contributors">Contributors</router-link>
-    <br/>
-    <router-link to="/instructions">Instructions</router-link>
     <br/>
     <br/>
     <br/>
     <div class="bottom_nav">
       <p>
-        <router-link to="/">Home</router-link>
+        <router-link to="/">Home</router-link> | 
+        <router-link to="/contributors">Contributors</router-link> | 
+        <router-link to="/instructions">Instructions</router-link>
       </p>
     </div>
     </div>

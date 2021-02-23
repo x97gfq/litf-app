@@ -5,14 +5,17 @@
         <div class="message_text">
           <h3 id="msg1">{{ title }}</h3>
           <h3 id="msg2">{{ subtitle }}</h3>
+          <!--
           <p id="enterLink">
             <router-link to="/Nighttime">Enter</router-link>
           </p>
+          -->
         </div>
       </div>
       <div class="bottom_nav">
         <p>
-          <router-link to="/">Home</router-link>
+          <router-link to="/">Home</router-link> | 
+          <router-link to="/Nighttime">Nighttime</router-link>
         </p>
         <audio autoplay>
           <source src="@/assets/audio/1. Judy - It is Dark.wav" type="audio/ogg">
@@ -58,8 +61,6 @@ div.message .message_text {
 </style>
 
 <script>
-//import $ from 'jquery'
-
 export default {
   name: 'Intro',
   data: function() {
@@ -71,6 +72,7 @@ export default {
   },
   mounted(){
     this.show = true;
+    setTimeout(() => this.$router.push({ name: 'Nighttime'}), 7000);
   }
 }
 </script>

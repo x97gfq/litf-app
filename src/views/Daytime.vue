@@ -3,10 +3,10 @@
     <div class="home daytime" v-if="show">
       <div class="bottom_nav">
           <p>
-              <router-link to="/">Home</router-link>
+              <b><router-link to="/">Home</router-link></b>
           </p>
           <audio autoplay loop id="forest_audio">
-              <source src="@/assets/audio/daytime.wav" type="audio/ogg">
+              <source src="@/assets/audio/daytime.mp3" type="audio/ogg">
           </audio>   
       </div>
     </div>
@@ -24,7 +24,9 @@
 }
 .daytime {
   background-image: url('~@/assets/backgrounds/daytimebackground.jpg');
+  background-size: cover;
   height: 100%;
+  width: 100%;
 }
 .v-enter { /* starting style */
   opacity: 0;

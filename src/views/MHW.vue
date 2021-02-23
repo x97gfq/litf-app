@@ -1,25 +1,23 @@
 <template>
     <div class="mhw">
-        <h3>Visit these mental health resources :</h3>
+      <h3>Visit these mental health resources :</h3>
         
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-        
-    <router-link to="/contributors">Contributors</router-link>
-    <br/>
-    <br/>
-    <br/>
-    <router-link to="/instructions">Instructions</router-link>
-    <br/>
-    <br/>
-    <br/>
-    <div class="bottom_nav">
-      <p>
-        <router-link to="/">Home</router-link>
-      </p>
-    </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
+      <div class="bottom_nav">
+        <p>
+          <router-link to="/">Home</router-link>
+        </p>
+      </div>
     </div>
 </template>
 

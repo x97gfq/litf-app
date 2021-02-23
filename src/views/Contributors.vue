@@ -83,7 +83,7 @@
 
 .student_names {
   column-count: 2;
-  padding: 1% 25% 5% 25%;
+  padding: 1% auto 5% auto;
   text-align: center;
 }
 
