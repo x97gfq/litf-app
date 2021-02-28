@@ -10,6 +10,7 @@ body, html {
   height: 100%;
   margin: 0px;
   font-family: Baskerville;
+  background-color: black;
 }
 a {
   color: white;
@@ -69,9 +70,13 @@ export default {
     showModal(animal) {
       this.isModalVisible = true;
       this.animal = animal;
-      
+
       var child = this.$refs.animalModal;
-      child.playAnimalSound();
+      if (this.animal.reveal_video != null) {
+          child.playAnimalRevealVideo();
+      } else {
+          child.playAnimalSound();
+      }
     },
     closeModal() {
       this.isModalVisible = false;

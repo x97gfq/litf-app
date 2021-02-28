@@ -1,41 +1,25 @@
-<script>
-export default {
-  name: "AnimalModal",
-  props: {
-      animal: null
-  },
-  methods: {
-    close() {
-      this.$refs.audio.pause();
-      this.$emit("close");
-    },
-    playAnimalSound() {
-      console.log("playAnimalSound");
-      if (this.$refs.audio != null) {
-        this.$refs.audio.load();
-        this.$refs.audio.play();
-      }
-    }
-  }
-};
-</script>
-
 <template>
   <transition name="animal-modal-fade">
     <div class="animal-modal-backdrop">
-      <div class="animal-modal" v-if="animal != null" style="max-width: 40%;">
+      <div id="animal_modal" class="animal-modal" v-if="animal != null">
 
-        <img 
-        v-bind:src="require('../assets/animals/' + animal.image)"
-        v-bind:alt="animal.name" 
-        v-bind:title="animal.name" 
-        id="animal_reveal" 
-        class="animal_img" 
-        @click="close"/>
-
-        <audio ref="audio" autoplay style="display: none;">
-          <source v-bind:src="require('../assets/audio/' + animal.sound)" type="audio/ogg">
-        </audio>
+        <div v-if="animal.reveal_video !== null">
+            <video id="animal_video" ref="video" autoplay @click="close">
+              <source v-bind:src="require('../assets/video/' + animal.reveal_video)" type="video/mp4">
+            </video>
+        </div>
+        <div v-if="animal.reveal_video === null">
+            <img 
+            id="animal_image"
+            v-bind:src="require('../assets/animals/' + animal.image)"
+            v-bind:alt="animal.name" 
+            v-bind:title="animal.name" 
+            class="animal_img" 
+            @click="close"/>
+            <audio ref="audio" autoplay style="display: none;">
+              <source v-bind:src="require('../assets/audio/' + animal.sound)" type="audio/ogg">
+            </audio>
+        </div>
 
       </div>
     </div>
@@ -95,3 +79,61 @@ export default {
   margin-block-start: 0.5rem;
 }
 </style>
+
+<script>
+import $ from 'jquery'
+
+export default {
+  name: "AnimalModal",
+  props: {
+      animal: null
+  },
+  methods: {
+    close() {
+      if (this.$refs.video != null) this.$refs.video.pause();
+      if (this.$refs.audio != null) this.$refs.audio.pause();
+      this.$emit("close");
+    },
+    playAnimalRevealVideo() {
+      console.log("playAnimalRevealVideo");
+      if (this.$refs.video != null) {
+        this.$refs.video.load();
+        this.$refs.video.play();
+
+        var self = this;
+        setTimeout(function() {
+            self.resizeModal(self.animal);
+        }, 500);
+      }
+    },
+    playAnimalSound() {
+      console.log("playAnimalSound");
+      if (this.$refs.audio != null) {
+        this.$refs.audio.load();
+        this.$refs.audio.play();
+
+        var self = this;
+        setTimeout(function() {
+            self.resizeModal(self.animal);
+        }, 500);
+      }
+    },
+    resizeModal(animal) {
+      if (animal.reveal_video != null) {
+          $('animal_modal').attr('height',$('animal_video').height());
+          $('animal_modal').attr('width',$('animal_video').width());
+      } else {
+          let img = new Image();
+          img.onload = () => {
+              console.log('the image dimensions are ${img.width}x${img.height}');
+              $('animal_modal').attr('height',img.height);
+              $('animal_modal').attr('width',img.width);
+          }
+          img.src = require('../assets/animals/' + animal.image);
+      }
+    }
+  },
+  mounted(){
+  }
+};
+</script>

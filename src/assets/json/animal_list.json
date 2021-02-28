@@ -7,7 +7,9 @@
         "eyes_open": "deer_eyes_open.png",
         "eye_state": "blink",
         "image": "deer.jpg",
-        "sound": "deer.wav"
+        "sound": "deer.wav",
+        "creation_video": "deer_creation_video.mp4",
+        "reveal_video": "deer_reveal_video.mp4"
       },
       {
         "id": 2,
@@ -16,7 +18,9 @@
         "eyes_open": "owl_eyes_open.png",
         "eye_state": "blink",
         "image": "owl.jpg",
-        "sound": "owl.wav"
+        "sound": "owl.wav",
+        "creation_video": null,
+        "reveal_video": null
       },
       {
         "id": 3,
@@ -25,7 +29,9 @@
         "eyes_open": "bear_eyes_open.png",
         "eye_state": "blink",
         "image": "bear.jpg",
-        "sound": "bear.wav"
+        "sound": "bear.wav",
+        "creation_video": null,
+        "reveal_video": null
       },
       {
         "id": 4,
@@ -34,7 +40,9 @@
         "eyes_open": "lynx_eyes_open.png",
         "eye_state": "blink",
         "image": "lynx.jpg",
-        "sound": "lynx.wav"
+        "sound": "lynx.wav",
+        "creation_video": null,
+        "reveal_video": null
       },
       {
         "id": 5,
@@ -43,7 +51,9 @@
         "eyes_open": "raven_eyes_open.png",
         "eye_state": "blink",
         "image": "raven.jpg",
-        "sound": "raven.wav"
+        "sound": "raven.wav",
+        "creation_video": null,
+        "reveal_video": null
       },
       {
         "id": 6,
@@ -52,7 +62,9 @@
         "eyes_open": "fox_eyes_open.png",
         "eye_state": "blink",
         "image": "fox.jpg",
-        "sound": "fox.wav"
+        "sound": "fox.wav",
+        "creation_video": null,
+        "reveal_video": null
       },
       {
         "id": 7,
@@ -61,7 +73,9 @@
         "eyes_open": "wolf_eyes_open.png",
         "eye_state": "blink",
         "image": "wolf.jpg",
-        "sound": "wolf.wav"
+        "sound": "wolf.wav",
+        "creation_video": null,
+        "reveal_video": null
       },
       {
         "id": 8,
@@ -70,7 +84,9 @@
         "eyes_open": "rabbit_eyes_open.png",
         "eye_state": "blink",
         "image": "rabbit.jpg",
-        "sound": "rabbit.wav"
+        "sound": "rabbit.wav",
+        "creation_video": null,
+        "reveal_video": null
       }
     ]
   }
