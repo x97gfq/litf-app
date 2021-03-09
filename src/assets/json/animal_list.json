@@ -7,7 +7,7 @@
         "eyes_open": "deer_eyes_open.png",
         "eye_state": "blink",
         "image": "deer.jpg",
-        "sound": "deer.wav",
+        "sound": "deer.mp3",
         "creation_video": "deer_creation_video.mp4",
         "reveal_video": "deer_reveal_video.mp4"
       },
@@ -18,7 +18,7 @@
         "eyes_open": "owl_eyes_open.png",
         "eye_state": "blink",
         "image": "owl.jpg",
-        "sound": "owl.wav",
+        "sound": "owl.mp3",
         "creation_video": null,
         "reveal_video": null
       },
@@ -29,7 +29,7 @@
         "eyes_open": "bear_eyes_open.png",
         "eye_state": "blink",
         "image": "bear.jpg",
-        "sound": "bear.wav",
+        "sound": "bear.mp3",
         "creation_video": null,
         "reveal_video": null
       },
@@ -40,7 +40,7 @@
         "eyes_open": "lynx_eyes_open.png",
         "eye_state": "blink",
         "image": "lynx.jpg",
-        "sound": "lynx.wav",
+        "sound": "lynx.mp3",
         "creation_video": null,
         "reveal_video": null
       },
@@ -51,7 +51,7 @@
         "eyes_open": "raven_eyes_open.png",
         "eye_state": "blink",
         "image": "raven.jpg",
-        "sound": "raven.wav",
+        "sound": "raven.mp3",
         "creation_video": null,
         "reveal_video": null
       },
@@ -62,7 +62,7 @@
         "eyes_open": "fox_eyes_open.png",
         "eye_state": "blink",
         "image": "fox.jpg",
-        "sound": "fox.wav",
+        "sound": "fox.mp3",
         "creation_video": null,
         "reveal_video": null
       },
@@ -73,7 +73,7 @@
         "eyes_open": "wolf_eyes_open.png",
         "eye_state": "blink",
         "image": "wolf.jpg",
-        "sound": "wolf.wav",
+        "sound": "wolf.mp3",
         "creation_video": null,
         "reveal_video": null
       },
@@ -84,7 +84,7 @@
         "eyes_open": "rabbit_eyes_open.png",
         "eye_state": "blink",
         "image": "rabbit.jpg",
-        "sound": "rabbit.wav",
+        "sound": "rabbit.mp3",
         "creation_video": null,
         "reveal_video": null
       }

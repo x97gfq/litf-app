@@ -85,7 +85,7 @@
   padding: 15px;
 }
 .nighttime {
-  background-image: url('~@/assets/backgrounds/Forest.png');
+  background-image: url('~@/assets/backgrounds/forest.png');
   height: 100%;
   width: 100%;
   background-repeat: repeat-x;

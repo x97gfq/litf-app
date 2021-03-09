@@ -18,7 +18,7 @@
           <router-link to="/Nighttime">Nighttime</router-link>
         </p>
         <audio autoplay>
-          <source src="@/assets/audio/1. Judy - It is Dark.wav" type="audio/ogg">
+          <source src="@/assets/audio/it_is_dark.mp3" type="audio/ogg">
         </audio>
       </div>
     </div>
