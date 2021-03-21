@@ -44,14 +44,15 @@
         
         <div>
           <div v-for="(animal) in animals" :key="animal.id">
-              <div v-show="animal.eye_state == 'open'" class="progress_bar_item">
-                {{animal.name}}
-              </div>
+              <div >
+                <span v-bind:class="[animal.eye_state == 'open' ? 'progress_bar_item2' : 'progress_bar_item']">{{animal.name}}</span>
+                </div>
+            </div>
+
           </div>
         </div>      
 
       </div>
-    </div>
   </transition>
 </template>
 
@@ -61,8 +62,20 @@
   float: left;
   width: 65px;
   padding: 2px;
+  color: grey;
+  background-color: grey;
+  border-radius: 10px;
+  margin: 10px;
+}
+.progress_bar_item2 {
+  display: inline;
+  float: left;
+  width: 80px;
+  height: 45px;
+  padding: 2px;
   color: #000000;
-  background-color: #FE914A;
+  background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/socialmedia/apple/271/eyes_1f440.png');
+  background-size: cover;
   border-radius: 10px;
   margin: 10px;
 }
@@ -70,7 +83,6 @@
   padding-top: 100px;
 }
 .eye {
-
 }
 .eyes { 
   top: 50%;
@@ -122,7 +134,6 @@
 <script>
 import GreenHeartComponent from '../components/GreenHeart.vue'
 import $ from 'jquery'
-
 export default {
   name: 'Nighttime',
   components: {
