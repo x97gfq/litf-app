@@ -41,43 +41,70 @@
             <!--&nbsp;&nbsp;<a class="text-success" href="#" v-on:click="startOver" style="cursor: pointer;">Start Over</a>-->
           </p>
         </div>
-        
-        <div>
-          <div v-for="(animal) in animals" :key="animal.id">
-              <div >
-                <span v-bind:class="[animal.eye_state == 'open' ? 'progress_bar_item2' : 'progress_bar_item']">{{animal.name}}</span>
-                </div>
+        <div style="width: 100%; text-align: center;">
+          <div v-for="(animal) in animalsSorted" :key="animal.id" 
+            v-bind:class="[animal.eye_state == 'open' ? 'progress_bar_item' : 'progress_bar_item_not_clicked']">
+            <div v-if="animal.eye_state !== 'open'">
+              <div class="progress_bar_image_holder">
+                &nbsp;
+              </div>
             </div>
-
+            <div v-if="animal.eye_state == 'open'">
+              <div class="progress_bar_image_holder">
+                <img class="progress_bar_image"
+                v-bind:src="require('../assets/eyes/' + animal.eyes)"
+                v-bind:alt="animal.name" 
+                v-bind:title="animal.name" 
+                v-on:click="showAnimal(animal)" style="cursor: pointer;"/>
+              </div>
+            </div>
+            <span class="progress_bar_item_text">{{animal.name}}</span>
           </div>
-        </div>      
-
+        </div>
       </div>
+    </div>
   </transition>
 </template>
 
 <style scoped lang="scss">
+.progress_bar_item_not_clicked {
+  display: inline;
+  float: left;
+  width: 65px;
+  height: 35px;
+  padding: 2px;
+  color: black;
+  background-color: gray;
+  border: solid silver 1px;
+  border-radius: 10px;
+  margin: 10px;
+}
 .progress_bar_item {
   display: inline;
   float: left;
   width: 65px;
+  height: 35px;
   padding: 2px;
-  color: grey;
-  background-color: grey;
+  color: silver;
+  background-color: black;
+  border: solid silver 1px;
   border-radius: 10px;
   margin: 10px;
 }
-.progress_bar_item2 {
-  display: inline;
-  float: left;
-  width: 80px;
-  height: 45px;
-  padding: 2px;
-  color: #000000;
-  background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/socialmedia/apple/271/eyes_1f440.png');
-  background-size: cover;
-  border-radius: 10px;
-  margin: 10px;
+.progress_bar_item_text {
+  font-family: Arial;
+  font-size: 8pt;
+  position: relative;
+  top: -25px;
+}
+.progress_bar_image_holder {
+  width: 50px;
+  height: 35px;
+  max-height: 35px;
+}
+.progress_bar_image {
+  max-width: 50px;
+  max-height: 30px;
 }
 .eye_lower {
   padding-top: 100px;
@@ -162,6 +189,11 @@ export default {
             if (animal.eye_state === 'blink') done = false;
         });
         return done;
+    },
+    animalsSorted: function () {
+        var arrAnimals = this.animals;
+        var sortedArrAnimals = arrAnimals.sort((a, b) => (a.eye_state > b.eye_state) ? -1 : 1);
+        return sortedArrAnimals;
     }
   },
   methods:{
