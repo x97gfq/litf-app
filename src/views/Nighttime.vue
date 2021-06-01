@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <div class = heart>
+      <div class="heart">
         <img
         src = "@/assets/images/greenhearttransparent2.png"
         height = "50"
@@ -57,8 +57,8 @@
                 v-bind:title="animal.name" 
                 v-on:click="showAnimal(animal)" style="cursor: pointer;"/>
               </div>
+              <span class="progress_bar_item_text">{{animal.name}}</span>
             </div>
-            <span class="progress_bar_item_text">{{animal.name}}</span>
           </div>
         </div>
       </div>
@@ -191,7 +191,9 @@ export default {
         return done;
     },
     animalsSorted: function () {
-        var arrAnimals = this.animals;
+        var str = JSON.stringify(this.animals);
+        var arrAnimals = JSON.parse(str);
+
         var sortedArrAnimals = arrAnimals.sort((a, b) => (a.eye_state > b.eye_state) ? -1 : 1);
         return sortedArrAnimals;
     }

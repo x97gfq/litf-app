@@ -1,6 +1,6 @@
 <template>
     <div class="heart">
-      <p class = "popup">
+      <p class="popup">
         Resource: {{ selectedResource.name }}<br/>
         Website: 
         <a :href="selectedResource.website" target="new">
@@ -11,6 +11,11 @@
 </template>
 
 <style scoped>
+.heart {
+  padding: 20px;
+  background: gray;
+  height: 100%;
+}
 a {
   color: blue;
 }
@@ -41,7 +46,7 @@ export default {
       console.log(this.longitude); // <-- our current longitude
       //
       //
-      // iterate over resources and print the name of each
+      // iterate over resources and print the name of each to the console
       this.resources.forEach(resource => {
         console.log(resource.name)
         console.log(resource.latitude) /* this resource's latitude */
@@ -49,8 +54,9 @@ export default {
       });
       //
       //
-      // for now, use the first resource in the list (assign resources[0] to selectedResource
-      this.selectedResource = this.resources[0];
+      // for now, choose a random resource
+      var randomNumber = Math.floor(Math.random() * this.resources.length);
+      this.selectedResource = this.resources[randomNumber];
       //
       //
       console.log(this.selectedResource);
