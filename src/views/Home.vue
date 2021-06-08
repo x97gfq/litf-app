@@ -6,7 +6,7 @@
         <router-link to="/Intro">Start</router-link>
       </p>
       <div class="bottom_nav">
-        <router-link to="/about">About</router-link> | <router-link to="/instructions">Instructions</router-link> | <router-link to="/contributors">Contributors</router-link> | <router-link to="/sponsors">Sponsors</router-link><!-- | <router-link to="/shop">Shop</router-link>--> | <router-link to="/mhw">Mental Health and Wellness Resources</router-link> |           <router-link to="/jamie">Jamie</router-link>
+        <router-link to="/test">Test</router-link> | <router-link to="/about">About</router-link> | <router-link to="/instructions">Instructions</router-link> | <router-link to="/contributors">Contributors</router-link> | <router-link to="/sponsors">Sponsors</router-link><!-- | <router-link to="/shop">Shop</router-link>--> | <router-link to="/mhw">Mental Health and Wellness Resources</router-link>
       </div>
     </div>
   </transition>
