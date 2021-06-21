@@ -73,7 +73,8 @@ const routes = [
   {
     path: '/animal',
     name: 'Animal',
-    component: () => import(/* webpackChunkName: "Test" */ '../views/Animal.vue')
+    component: () => import(/* webpackChunkName: "Test" */ '../views/Animal.vue'),
+    props: true
   }, 
 
 ]
