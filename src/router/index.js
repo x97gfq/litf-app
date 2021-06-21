@@ -68,7 +68,14 @@ const routes = [
     path: '/jamie',
     name: 'Jamie',
     component: () => import('../views/Jamie.vue')
-  }
+
+  },
+  {
+    path: '/animal',
+    name: 'Animal',
+    component: () => import(/* webpackChunkName: "Test" */ '../views/Animal.vue')
+  }, 
+
 ]
 
 const router = new VueRouter({

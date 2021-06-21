@@ -117,29 +117,30 @@
   opacity: 0;
 }
 .v-enter-active { /* active entering style */
-  transition: opacity 7s ease-in; 
+  transition: opacity 3s ease-in; 
 }
 .v-leave-active { /* active leaving style */
-  transition: opacity 0.5s ease-out; 
+  transition: opacity 4s ease-out; 
 }
 .v-leave-to { /* ending style */
   opacity: 0;
 }
+
 </style>
 
-
 <script>
+
 export default {
-  name: 'Cutscene',
-  data: function() {
-    return  {
-      show: false
-      
+  name: 'Home',
+   data() {
+    return {
+      show: false,
+      animals: null
     }
   },
   mounted(){
     this.show = true;
-    setTimeout(() => this.$router.push({ name: 'Instructions'}), 9000);
+    setTimeout(() => this.$router.push({ name: 'Instructions'}), 3000);
   }
 }
 </script>
