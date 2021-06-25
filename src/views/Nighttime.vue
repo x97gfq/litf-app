@@ -50,14 +50,14 @@
               </div>
             </div>
             <div v-if="animal.eye_state == 'open'">
-              <div class="progress_bar_image_holder">
+              <!--<div class="progress_bar_image_holder">
                 <img class="progress_bar_image"
                 v-bind:src="require('../assets/eyes/' + animal.eyes)"
                 v-bind:alt="animal.name" 
                 v-bind:title="animal.name" 
                 v-on:click="showAnimal(animal)" style="cursor: pointer;"/>
               </div>
-              <span class="progress_bar_item_text">{{animal.name}}</span>
+              <span class="progress_bar_item_text">{{animal.name}}</span>-->
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
 </template>
 
 <style scoped lang="scss">
-.progress_bar_item_not_clicked {
+/*.progress_bar_item_not_clicked { //to remove progress bar like this for now. 
   display: inline;
   float: left;
   width: 65px;
@@ -105,14 +105,16 @@
 .progress_bar_image {
   max-width: 50px;
   max-height: 30px;
-}
+}*/
 .eye_lower {
   padding-top: 100px;
+  //padding-left: 10px;
+  //padding-right: 10px;
 }
 .eye {
 }
 .eyes { 
-  top: 50%;
+  //top: 50%;
   position: absolute; 
   width: 100%;
   text-align: center;
@@ -121,10 +123,10 @@
 }
 .eye_holder {
   display: inline;
-  padding: 15px;
+  //padding: 15px;
 }
 .nighttime {
-  background-image: url('~@/assets/backgrounds/Forest.png');
+  //background-image: url('~@/assets/backgrounds/Forest.png');
   height: 100%;
   width: 100%;
   background-repeat: repeat-x;
@@ -134,10 +136,10 @@
   padding: 20px; 
   width: 400px; 
   margin: auto; 
-  padding-top: 100px;  
+  //padding-top: 100px;  
 }
 .heart {
-  padding-top: 350px;
+  //padding-top: 350px;
   padding-left: 75%;
 }
 .v-enter { /* starting style */
