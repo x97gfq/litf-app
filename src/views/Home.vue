@@ -1,12 +1,12 @@
 <template>
   <transition name="v">
     <div class="home" v-if="show">
-      <img id="coverimg" src="@/assets/images/Lightintheforest_cover.jpg" v-on:click="goToIntro()"/>
+      <img id="coverimg" src="@/assets/images/litf_title_fade.gif" v-on:click="goToIntro()"/>
       <p id="enterLink">
         <router-link to="/Intro">Start</router-link>
       </p>
       <div class="bottom_nav">
-        <router-link to="/animal">Animal</router-link> | <router-link to="/about">About</router-link> | <router-link to="/instructions">Instructions</router-link> | <router-link to="/contributors">Contributors</router-link> | <router-link to="/sponsors">Sponsors</router-link><!-- | <router-link to="/shop">Shop</router-link>--> | <router-link to="/mhw">Mental Health and Wellness Resources</router-link>
+        <router-link to="/about">About</router-link> | <router-link to="/instructions">Instructions</router-link> | <router-link to="/contributors">Contributors</router-link> | <router-link to="/sponsors">Sponsors</router-link><!-- | <router-link to="/shop">Shop</router-link>--> | <router-link to="/mhw">Mental Health and Wellness Resources</router-link>
       </div>
     </div>
   </transition>
@@ -18,11 +18,9 @@
   font-family: Baskerville;
 }
 #coverimg {
-  border-radius: 20%;
-  -moz-border-radius: 20%;
-  -webkit-border-radius: 20%;
-  width: 40%;
-  padding-top: 40px;
+  padding-top: 200px;
+  max-width: 350px;
+  padding-bottom: 100px;
 }
 .v-enter { /* starting style */
   opacity: 0;
