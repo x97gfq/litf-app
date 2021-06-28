@@ -3,18 +3,24 @@
     {
       "id": 1,
       "name": "Harriet Irving Botanical Gardens",
+      "description": "This is...",
       "latitude": "45.0874934",
       "longitude": "-64.3683242",
+      "image" : null,
       "maplink": "",
-      "website": "https://kcirvingcentre.acadiau.ca/"
+      "website": "https://kcirvingcentre.acadiau.ca/",
+      "leaf": "green"
     },
     {
       "id": 2,
       "name": "Student Union Building",
+      "description": "This is...",
       "latitude": "45.0889940",
       "longitude": "-64.3664147",
+      "image" : null,
       "maplink": "",
-      "website": "http://theasu.ca/services.html"
+      "website": "http://theasu.ca/services.html",
+      "leaf": "green"
     }
   ]
 }
