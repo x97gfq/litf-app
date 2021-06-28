@@ -60,15 +60,23 @@ const routes = [
     component: () => import(/* webpackChunkName: "Sponsors" */ '../views/Sponsors.vue')
   },
   {
-    path: '/test',
-    name: 'Test',
-    component: () => import(/* webpackChunkName: "Test" */ '../views/Test.vue')
+    path: '/cutscene',
+    name: 'Cutscene',
+    component: () => import(/* webpackChunkName: "Test" */ '../views/Cutscene.vue')
   }, 
   {
     path: '/jamie',
     name: 'Jamie',
     component: () => import('../views/Jamie.vue')
-  }
+
+  },
+  {
+    path: '/animal',
+    name: 'Animal',
+    component: () => import(/* webpackChunkName: "Test" */ '../views/Animal.vue'),
+    props: true
+  }, 
+
 ]
 
 const router = new VueRouter({

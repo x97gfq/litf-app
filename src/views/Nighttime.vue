@@ -146,12 +146,14 @@
 .v-enter-active { /* active entering style */
   transition: opacity 3s ease-in; 
 }
-.v-leave-active { /* active leaving style */
+/*
+.v-leave-active { 
   transition: opacity 0.5s ease-out; 
 }
-.v-leave-to { /* ending style */
+.v-leave-to { 
   opacity: 0;
 }
+*/
 .alert {
   font-family: Baskerville;
   margin-top: 200px;
@@ -210,7 +212,8 @@ export default {
     showAnimal(animal) {
       animal.eye_state = 'open';
       console.log('show animal: ' + animal.name);
-      this.$parent.showModal(animal);
+      //transition to animal page
+      this.$router.push({ name: 'Animal', params: { animal: animal } });
     },
     getAnimals () {
       this.animals = this.$store.getters.getAnimalList;

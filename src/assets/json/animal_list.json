@@ -8,6 +8,7 @@
         "eye_state": "blink",
         "image": "deer.jpg",
         "sound": "deer.mp3",
+        "night_video": "NightDeer.mp4",
         "creation_video": "deer_creation_video.mp4",
         "reveal_video": "deer_reveal_video.mp4"
       },
@@ -19,6 +20,7 @@
         "eye_state": "blink",
         "image": "owl.jpg",
         "sound": "owl.mp3",
+        "night_video": "NightOwl.mp4",
         "creation_video": null,
         "reveal_video": null
       },
@@ -30,6 +32,7 @@
         "eye_state": "blink",
         "image": "bear.jpg",
         "sound": "bear.mp3",
+        "night_video": "NightBear.mp4",
         "creation_video": null,
         "reveal_video": null
       },
@@ -41,6 +44,7 @@
         "eye_state": "blink",
         "image": "lynx.jpg",
         "sound": "lynx.mp3",
+        "night_video": "",
         "creation_video": null,
         "reveal_video": null
       },
@@ -52,6 +56,7 @@
         "eye_state": "blink",
         "image": "raven.jpg",
         "sound": "raven.mp3",
+        "night_video": "NightRaven.mp4",
         "creation_video": null,
         "reveal_video": null
       },
@@ -63,6 +68,7 @@
         "eye_state": "blink",
         "image": "fox.jpg",
         "sound": "fox.mp3",
+        "night_video": "NightFox.mp4",
         "creation_video": null,
         "reveal_video": null
       },
@@ -74,6 +80,7 @@
         "eye_state": "blink",
         "image": "wolf.jpg",
         "sound": "wolf.mp3",
+        "night_video": "NightWolf.mp4",
         "creation_video": null,
         "reveal_video": null
       },
@@ -85,6 +92,7 @@
         "eye_state": "blink",
         "image": "rabbit.jpg",
         "sound": "rabbit.mp3",
+        "night_video": "NightRabbit.mp4",
         "creation_video": null,
         "reveal_video": null
       }
