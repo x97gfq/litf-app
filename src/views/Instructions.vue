@@ -3,6 +3,9 @@
     <h3>Instructions</h3>
     <br/>
     <br/>
+    <p>
+      Click on each eye and find a surprise waiting for you
+    </p>
     <br/>
     <br/>
     <br/>

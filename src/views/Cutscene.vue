@@ -1,6 +1,7 @@
 <template>
   <transition name="v">
-    <div class="cutscene" v-if="show">  
+    <div class="cutscene" >  
+      <router-link to="/Instructions">Instructions</router-link>
       <div class="quote-wrapper">
         <blockquote class="text">
           <p>Light In The Forest</p>
@@ -104,6 +105,7 @@
   );
   shape-margin: 7%;
 }
+
 @keyframes glow {
   from {
     text-shadow: 0 0 10px #d6c912, 0 0 10px black, 0 0 30px #d6c912, 0 0 40px #d6c912, 0 0 50px #d6c912, 0 0 60px #d6c912, 0 0 70px #d6c912;
@@ -119,28 +121,29 @@
 .v-enter-active { /* active entering style */
   transition: opacity 3s ease-in; 
 }
-.v-leave-active { /* active leaving style */
-  transition: opacity 4s ease-out; 
+/*
+.v-leave-active { 
+  transition: opacity 0.5s ease-out; 
 }
-.v-leave-to { /* ending style */
+.v-leave-to { 
   opacity: 0;
-}
-
+} 
+*/
 </style>
 
 <script>
 
 export default {
-  name: 'Home',
+  name: 'Cutscene',
    data() {
     return {
-      show: false,
+      
       animals: null
     }
   },
   mounted(){
-    this.show = true;
-    setTimeout(() => this.$router.push({ name: 'Instructions'}), 3000);
+    
+    //setTimeout(() => this.$router.push({ name: 'Instructions'}), 7000);
   }
 }
 </script>
