@@ -21,9 +21,9 @@
         </div>
       </div>
 
-      <div class="heart">
+      <div class="leaf">
         <img
-        src = "@/assets/images/greenhearttransparent2.png"
+        src = "@/assets/images/greenLeaf.png"
         height = "50"
         width = "50"
         v-on:click="showInfo()" style="cursor: pointer;"
@@ -138,8 +138,8 @@
   margin: auto; 
   //padding-top: 100px;  
 }
-.heart {
-  //padding-top: 350px;
+.leaf {
+  padding-top: 43%;
   padding-left: 75%;
 }
 .v-enter { /* starting style */
@@ -163,7 +163,7 @@
 </style>
 
 <script>
-import GreenHeartComponent from '../components/GreenHeart.vue'
+import LeafComponent from '../components/Leaf.vue'
 import $ from 'jquery'
 export default {
   name: 'Nighttime',
@@ -222,7 +222,7 @@ export default {
     },
     showInfo () {
         this.$modal.show(
-          GreenHeartComponent,
+          LeafComponent,
           {},
           {draggable: true}
         )
