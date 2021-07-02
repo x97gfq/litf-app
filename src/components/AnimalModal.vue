@@ -7,6 +7,11 @@
           <video id="animal_video" ref="video" autoplay @click="close">
             <source v-bind:src="require('../assets/video/' + animal.night_video)" type="video/mp4">
           </video>
+
+          <audio ref="audio" autoplay style="display: none;">
+            <source v-bind:src="require('../assets/audio/' + animal.sound)" type="audio/ogg">
+          </audio>
+
         </div>
         <div v-if="animal.night_video === ''" style="background-color: black;">
           <div class="error">
@@ -76,13 +81,20 @@ export default {
       if (this.$refs.audio != null) this.$refs.audio.pause();
       this.$emit("close");
     },
-    playAnimalRevealVideo() {
-      console.log("playAnimalRevealVideo");
+    playAnimalNightVideo() {
+      console.log("playAnimalNightVideo");
       if (this.$refs.video != null) {
         this.$refs.video.load();
         this.$refs.video.play();
       }
     },    
+    playAnimalSound() {
+      console.log("playAnimalSound");
+      if (this.$refs.audio != null) {
+        this.$refs.audio.load();
+        this.$refs.audio.play();
+      }
+    },
   },
   mounted(){
   }

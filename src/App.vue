@@ -68,14 +68,15 @@ export default {
   },
   methods:{
     showModal(animal) {
+      console.log("open modal (" + animal.name + ")")
       this.isModalVisible = true;
       this.animal = animal;
       
       var child = this.$refs.animalModal;
       if (this.animal.night_video != null) {
-          child.playAnimalRevealVideo();
+        child.playAnimalNightVideo();
+        child.playAnimalSound();
       }
-      
     },
     closeModal() {
       this.isModalVisible = false;
