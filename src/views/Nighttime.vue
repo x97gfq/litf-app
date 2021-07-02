@@ -10,10 +10,9 @@
           </div>            
       </div>
 
-      <div class="eyes">
-        <div class="eye_holder" v-for="(animal, index) in animals" :key="animal.id">
-          <img 
-          v-bind:class="classNameByIndex(index)"
+      <div class="eyes" v-for="animal in animals" :key="animal.id">
+        <div class="eye_holder">
+          <img class="eye"
           v-bind:src="require('../assets/eyes/' + (animal.eye_state == 'open' ? animal.eyes_open : animal.eyes))"
           v-bind:alt="animal.name" 
           v-bind:title="animal.name" 
@@ -41,6 +40,7 @@
             <!--&nbsp;&nbsp;<a class="text-success" href="#" v-on:click="startOver" style="cursor: pointer;">Start Over</a>-->
           </p>
         </div>
+        <!--
         <div style="width: 100%; text-align: center;">
           <div v-for="(animal) in animalsSorted" :key="animal.id" 
             v-bind:class="[animal.eye_state == 'open' ? 'progress_bar_item' : 'progress_bar_item_not_clicked']">
@@ -50,17 +50,18 @@
               </div>
             </div>
             <div v-if="animal.eye_state == 'open'">
-              <!--<div class="progress_bar_image_holder">
+              <div class="progress_bar_image_holder">
                 <img class="progress_bar_image"
                 v-bind:src="require('../assets/eyes/' + animal.eyes)"
                 v-bind:alt="animal.name" 
                 v-bind:title="animal.name" 
                 v-on:click="showAnimal(animal)" style="cursor: pointer;"/>
               </div>
-              <span class="progress_bar_item_text">{{animal.name}}</span>-->
+              <span class="progress_bar_item_text">{{animal.name}}</span>
             </div>
           </div>
         </div>
+        -->
       </div>
     </div>
   </transition>
@@ -114,16 +115,14 @@
 .eye {
 }
 .eyes { 
-  //top: 50%;
-  position: absolute; 
   width: 100%;
-  text-align: center;
-  bottom: 150px; 
-  margin: auto;
 }
 .eye_holder {
   display: inline;
-  //padding: 15px;
+  float: left;
+  width: 25%;
+  height: 100px;
+  margin-top: 100px;
 }
 .nighttime {
   //background-image: url('~@/assets/backgrounds/Forest.png');
@@ -194,13 +193,6 @@ export default {
         });
         return done;
     },
-    animalsSorted: function () {
-        var str = JSON.stringify(this.animals);
-        var arrAnimals = JSON.parse(str);
-
-        var sortedArrAnimals = arrAnimals.sort((a, b) => (a.eye_state > b.eye_state) ? -1 : 1);
-        return sortedArrAnimals;
-    }
   },
   methods:{
     startOver: function() {
@@ -208,14 +200,17 @@ export default {
             animal.eye_state = 'blink';
         });
     },
+    /*
     classNameByIndex: function (index) {
       return index % 2 == (0 || 1) ? 'eye' : 'eye_lower';
     },
+    */
     showAnimal(animal) {
       animal.eye_state = 'open';
       console.log('show animal: ' + animal.name);
       //transition to animal page
-      this.$router.push({ name: 'Animal', params: { animal: animal } });
+      this.$parent.showModal(animal);
+      //setTimeout(() => this.$router.push({ name: 'Animal', params: { animal: animal } }), 250);
     },
     getAnimals () {
       this.animals = this.$store.getters.getAnimalList;

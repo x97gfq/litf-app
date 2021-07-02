@@ -10,7 +10,8 @@
         "sound": "deer.mp3",
         "night_video": "NightDeer.mp4",
         "creation_video": "deer_creation_video.mp4",
-        "reveal_video": "deer_reveal_video.mp4"
+        "reveal_video": "deer_reveal_video.mp4",
+        "nighttime_position": 2
       },
       {
         "id": 2,
@@ -22,7 +23,8 @@
         "sound": "owl.mp3",
         "night_video": "NightOwl.mp4",
         "creation_video": null,
-        "reveal_video": null
+        "reveal_video": null,
+        "nighttime_position": 3
       },
       {
         "id": 3,
@@ -34,7 +36,8 @@
         "sound": "bear.mp3",
         "night_video": "NightBear.mp4",
         "creation_video": null,
-        "reveal_video": null
+        "reveal_video": null,
+        "nighttime_position": 4
       },
       {
         "id": 4,
@@ -44,9 +47,10 @@
         "eye_state": "blink",
         "image": "lynx.jpg",
         "sound": "lynx.mp3",
-        "night_video": "",
+        "night_video": "NightLynx.mp4",
         "creation_video": null,
-        "reveal_video": null
+        "reveal_video": null,
+        "nighttime_position": 8
       },
       {
         "id": 5,
@@ -58,7 +62,8 @@
         "sound": "raven.mp3",
         "night_video": "NightRaven.mp4",
         "creation_video": null,
-        "reveal_video": null
+        "reveal_video": null,
+        "nighttime_position": 1
       },
       {
         "id": 6,
@@ -70,7 +75,8 @@
         "sound": "fox.mp3",
         "night_video": "NightFox.mp4",
         "creation_video": null,
-        "reveal_video": null
+        "reveal_video": null,
+        "nighttime_position": 7
       },
       {
         "id": 7,
@@ -82,7 +88,8 @@
         "sound": "wolf.mp3",
         "night_video": "NightWolf.mp4",
         "creation_video": null,
-        "reveal_video": null
+        "reveal_video": null,
+        "nighttime_position": 5
       },
       {
         "id": 8,
@@ -94,7 +101,8 @@
         "sound": "rabbit.mp3",
         "night_video": "NightRabbit.mp4",
         "creation_video": null,
-        "reveal_video": null
+        "reveal_video": null,
+        "nighttime_position": 6
       }
     ]
   }

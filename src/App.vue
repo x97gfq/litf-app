@@ -70,21 +70,20 @@ export default {
     showModal(animal) {
       this.isModalVisible = true;
       this.animal = animal;
-
+      
       var child = this.$refs.animalModal;
-      if (this.animal.reveal_video != null) {
+      if (this.animal.night_video != null) {
           child.playAnimalRevealVideo();
-      } else {
-          child.playAnimalSound();
       }
+      
     },
     closeModal() {
       this.isModalVisible = false;
     },  
     setupAnimals () {
       var list = AnimalList.animals;
-      list.sort(function(){return 0.5 - Math.random()});
-      this.$store.commit("setAnimalList", list);
+      var sortedArrAnimals = list.sort((a, b) => (a.nighttime_position < b.nighttime_position ? -1 : 1));
+      this.$store.commit("setAnimalList", sortedArrAnimals);
     },
     setupResources () {
       var list = ResourceList.resources;

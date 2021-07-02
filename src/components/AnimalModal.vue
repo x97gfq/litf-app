@@ -3,22 +3,16 @@
     <div class="animal-modal-backdrop">
       <div id="animal_modal" class="animal-modal" v-if="animal != null">
 
-        <div v-if="animal.reveal_video !== null">
-            <video id="animal_video" ref="video" autoplay @click="close">
-              <source v-bind:src="require('../assets/video/' + animal.reveal_video)" type="video/mp4">
-            </video>
+        <div v-if="animal.night_video !== ''" style="background-color: black;">
+          <video id="animal_video" ref="video" autoplay @click="close">
+            <source v-bind:src="require('../assets/video/' + animal.night_video)" type="video/mp4">
+          </video>
         </div>
-        <div v-if="animal.reveal_video === null">
-            <img 
-            id="animal_image"
-            v-bind:src="require('../assets/animals/' + animal.image)"
-            v-bind:alt="animal.name" 
-            v-bind:title="animal.name" 
-            class="animal_img" 
-            @click="close"/>
-            <audio ref="audio" autoplay style="display: none;">
-              <source v-bind:src="require('../assets/audio/' + animal.sound)" type="audio/ogg">
-            </audio>
+        <div v-if="animal.night_video === ''" style="background-color: black;">
+          <div class="error">
+            <p style="color: red;">Error loading video.</p>
+            <input type="button" @click="close" value="close"/>
+          </div>
         </div>
 
       </div>
@@ -51,38 +45,26 @@
   background: #5c5c5c;
   box-shadow: 2px 2px 20px 1px;
   overflow-x: auto;
-  display: flex;
-  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
-.btn-close {
-  border: none;
-  font-size: 20px;
-  padding: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #000;
-  background: transparent;
-  text-align: right;
+.error {
+  height: 100vh;
+  width: 100vw;
+  color: red;
 }
-.btn-green {
-  color: white;
-  background: #828282;
-  border: 1px solid #828282;
-  border-radius: 2px;
-  margin: 5px;
-}
-.input {
-  margin-top: 5px;
-}
-.added-text {
-  margin-block-end: -10px;
-  margin-block-start: 0.5rem;
+video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: fill;
 }
 </style>
 
 <script>
-import $ from 'jquery'
-
 export default {
   name: "AnimalModal",
   props: {
@@ -99,39 +81,8 @@ export default {
       if (this.$refs.video != null) {
         this.$refs.video.load();
         this.$refs.video.play();
-
-        var self = this;
-        setTimeout(function() {
-            self.resizeModal(self.animal);
-        }, 500);
       }
-    },
-    playAnimalSound() {
-      console.log("playAnimalSound");
-      if (this.$refs.audio != null) {
-        this.$refs.audio.load();
-        this.$refs.audio.play();
-
-        var self = this;
-        setTimeout(function() {
-            self.resizeModal(self.animal);
-        }, 500);
-      }
-    },
-    resizeModal(animal) {
-      if (animal.reveal_video != null) {
-          $('animal_modal').attr('height',$('animal_video').height());
-          $('animal_modal').attr('width',$('animal_video').width());
-      } else {
-          let img = new Image();
-          img.onload = () => {
-              console.log('the image dimensions are ${img.width}x${img.height}');
-              $('animal_modal').attr('height',img.height);
-              $('animal_modal').attr('width',img.width);
-          }
-          img.src = require('../assets/animals/' + animal.image);
-      }
-    }
+    },    
   },
   mounted(){
   }
