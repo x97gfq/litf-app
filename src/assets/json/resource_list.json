@@ -21,6 +21,65 @@
       "maplink": "",
       "website": "http://theasu.ca/services.html",
       "leaf": "green"
+    },
+    {
+      "id": 4,
+      "name": "Counselling Centre",
+      "description": "This is.. You can email at counselling@acadiau.ca",
+      "latitude": "45.0889940",
+      "longitude": "-64.3664147",
+      "image" : null,
+      "maplink": "",
+      "website": "https://www2.acadiau.ca/student-life/health-wellness/mental-health.html",
+      "leaf": "purple"
+    },
+    {
+      "id": 5,
+      "name": "NS Mental Health Crisis Line",
+      "description": "This is for when you need help now! Phone number: 1-888-429-8167",
+      "image" : null,
+      "maplink": "",
+      "website": "https://www2.acadiau.ca/student-life/health-wellness/mental-health.html",
+      "leaf": "purple" 
+    },{
+      "id": 6,
+      "name": "First Nations and Inuit Hope for Wellness Help line",
+      "description": "This is for when you need help now! Phone number: 1-855-242-3310",
+      
+      "image" : null,
+      "maplink": "",
+      "website": "https://www2.acadiau.ca/student-life/health-wellness/mental-health.html",
+      "leaf": "purple"
+    },{
+      "id": 7,
+      "name": "Wolfville Waterfront Park",
+      "description": "This is.. ",
+      "latitude": "45.0835",
+      "longitude": "-64.3655",
+      "image" : null,
+      "maplink": "",
+      "website": "",
+      "leaf": "green"
+    },{
+      "id": 8,
+      "name": "Kings County Rail Rail",
+      "description": "This is.. ",
+      "latitude": "45.092463",
+      "longitude": "-64.359882",
+      "image" : null,
+      "maplink": "",
+      "website": "",
+      "leaf": "green"
+    },{
+      "id": 9,
+      "name": "Wolfville Woodlawn Trail",
+      "description": "This is.. ",
+      "latitude": "45.0835",
+      "longitude": "-64.3666",
+      "image" : null,
+      "maplink": "",
+      "website": "",
+      "leaf": "green"
     }
   ]
 }

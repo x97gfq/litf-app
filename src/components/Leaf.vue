@@ -1,5 +1,5 @@
 <template>
-    <div class="heart">
+    <div class="leaf">
       <p class="popup">
         Resource: {{ selectedResource.name }}<br/>
         Website: 
@@ -11,7 +11,7 @@
 </template>
 
 <style scoped>
-.heart {
+.leaf {
   padding: 20px;
   background: gray;
   height: 100%;
@@ -23,7 +23,7 @@ a {
 
 <script>
 export default {
-  name: 'Heart',
+  name: 'Leaf',
   props: {
   
   },
