@@ -1,12 +1,19 @@
 <template>
     <div class="leaf">
-      <p class="popup">
+      <div class="popup">
         Resource: {{ selectedResource.name }}<br/>
-        Website: 
-        <a :href="selectedResource.website" target="new">
-          {{ selectedResource.website }}
-        </a>
-      </p>
+
+        <div v-if="selectedResource.website != ''">
+          Website: 
+          <a :href="selectedResource.website" target="new">
+            {{ selectedResource.website }}
+          </a>
+        </div>
+        <div v-if="selectedResource.maplink != ''">
+          <p v-html="selectedResource.maplink"></p>
+        </div>
+
+      </div>
     </div>
 </template>
 
