@@ -25,7 +25,7 @@ a {
 export default {
   name: 'Leaf',
   props: {
-  
+    leafColor: String  
   },
   data () {
     return {
@@ -54,9 +54,18 @@ export default {
       });
       //
       //
-      // for now, choose a random resource
-      var randomNumber = Math.floor(Math.random() * this.resources.length);
-      this.selectedResource = this.resources[randomNumber];
+      // picking resources by color
+      var newList = [];
+      this.resources.forEach(resource => {
+        if (resource.leaf === this.leafColor) {
+          newList.push(resource);
+        }
+      });
+      //
+      //
+      // pick a random resource of this color    
+      var randomNumber = Math.floor(Math.random() * newList.length);
+      this.selectedResource = newList[randomNumber];
       //
       //
       console.log(this.selectedResource);
