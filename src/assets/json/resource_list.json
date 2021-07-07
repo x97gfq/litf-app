@@ -45,7 +45,6 @@
       "id": 6,
       "name": "First Nations and Inuit Hope for Wellness Help line",
       "description": "This is for when you need help now! Phone number: 1-855-242-3310",
-      
       "image" : null,
       "maplink": "",
       "website": "https://www2.acadiau.ca/student-life/health-wellness/mental-health.html",
@@ -80,6 +79,16 @@
       "maplink": "",
       "website": "",
       "leaf": "green"
+    },{
+      "id": 10,
+      "name": "Yellow Place holder",
+      "description": "This is.. ",
+      "latitude": "45.0835",
+      "longitude": "-64.3666",
+      "image" : null,
+      "maplink": "",
+      "website": "",
+      "leaf": "yellow"
     }
   ]
 }
