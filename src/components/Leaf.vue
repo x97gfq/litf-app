@@ -1,17 +1,24 @@
 <template>
-    <div class="heart">
-      <p class="popup">
+    <div class="leaf">
+      <div class="popup">
         Resource: {{ selectedResource.name }}<br/>
-        Website: 
-        <a :href="selectedResource.website" target="new">
-          {{ selectedResource.website }}
-        </a>
-      </p>
+
+        <div v-if="selectedResource.website != ''">
+          Website: 
+          <a :href="selectedResource.website" target="new">
+            {{ selectedResource.website }}
+          </a>
+        </div>
+        <div v-if="selectedResource.maplink != ''">
+          <p v-html="selectedResource.maplink"></p>
+        </div>
+
+      </div>
     </div>
 </template>
 
 <style scoped>
-.heart {
+.leaf {
   padding: 20px;
   background: gray;
   height: 100%;
@@ -23,9 +30,9 @@ a {
 
 <script>
 export default {
-  name: 'Heart',
+  name: 'Leaf',
   props: {
-  
+    leafColor: String  
   },
   data () {
     return {
@@ -54,9 +61,18 @@ export default {
       });
       //
       //
-      // for now, choose a random resource
-      var randomNumber = Math.floor(Math.random() * this.resources.length);
-      this.selectedResource = this.resources[randomNumber];
+      // picking resources by color
+      var newList = [];
+      this.resources.forEach(resource => {
+        if (resource.leaf === this.leafColor) {
+          newList.push(resource);
+        }
+      });
+      //
+      //
+      // pick a random resource of this color    
+      var randomNumber = Math.floor(Math.random() * newList.length);
+      this.selectedResource = newList[randomNumber];
       //
       //
       console.log(this.selectedResource);

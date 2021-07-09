@@ -20,15 +20,31 @@
         </div>
       </div>
 
-      <div class="heart">
+      <div class="leaf">
         <img
-        src = "@/assets/images/greenhearttransparent2.png"
+        src = "@/assets/images/greenLeaf.png"
         height = "50"
         width = "50"
-        v-on:click="showInfo()" style="cursor: pointer;"
+        v-on:click="showInfo('purple')" style="cursor: pointer;"
         />
-      </div>    
-
+      </div>   
+      <div class="leaf">
+        <img
+        src = "@/assets/images/greenLeaf.png"
+        height = "50"
+        width = "50"
+        v-on:click="showInfo('yellow')" style="cursor: pointer;"
+        />
+      </div> 
+      <div class="leaf">
+        <img
+        src = "@/assets/images/greenLeaf.png"
+        height = "50"
+        width = "50"
+        v-on:click="showInfo('green')" style="cursor: pointer;"
+        />
+      </div>
+      
       <audio autoplay loop ref="forest_audio">
         <source src="@/assets/audio/forest.mp3" type="audio/ogg">
       </audio>
@@ -137,9 +153,10 @@
   margin: auto; 
   //padding-top: 100px;  
 }
-.heart {
-  //padding-top: 350px;
-  padding-left: 75%;
+.leaf {
+  display: inline;
+  float: right;
+  padding-top: 43%;
 }
 .v-enter { /* starting style */
   opacity: 0;
@@ -162,7 +179,7 @@
 </style>
 
 <script>
-import GreenHeartComponent from '../components/GreenHeart.vue'
+import LeafComponent from '../components/Leaf.vue'
 import $ from 'jquery'
 export default {
   name: 'Nighttime',
@@ -215,10 +232,10 @@ export default {
     getAnimals () {
       this.animals = this.$store.getters.getAnimalList;
     },
-    showInfo () {
+    showInfo (leafcolor) {
         this.$modal.show(
-          GreenHeartComponent,
-          {},
+          LeafComponent,
+          {leafColor: leafcolor},
           {draggable: true}
         )
     }
