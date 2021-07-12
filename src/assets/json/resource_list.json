@@ -3,29 +3,29 @@
     {
       "id": 1,
       "name": "Harriet Irving Botanical Gardens",
-      "description": "This is...",
+      "description": "This is a place to go and just relax in a garden.",
       "latitude": "45.0874934",
       "longitude": "-64.3683242",
       "image" : null,
-      "maplink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11267.664610556403!2d-64.3683242!3d45.0874934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3b2634add08776!2sHarriet%20Irving%20Botanical%20Gardens!5e0!3m2!1sen!2sca!4v1625678442370!5m2!1sen!2sca\" width=\"200\" height=\"200\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+      "maplink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11267.664610556403!2d-64.3683242!3d45.0874934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3b2634add08776!2sHarriet%20Irving%20Botanical%20Gardens!5e0!3m2!1sen!2sca!4v1625678442370!5m2!1sen!2sca\" width=\"400\" height=\"190\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
       "website": "https://kcirvingcentre.acadiau.ca/",
       "leaf": "green"
     },
     {
       "id": 2,
       "name": "Student Union Building",
-      "description": "This is...",
+      "description": "This is a place where you can go and grab a snack or just relax.",
       "latitude": "45.0889940",
       "longitude": "-64.3664147",
       "image" : null,
-      "maplink": "",
+      "maplink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11267.46186555541!2d-64.3644924!3d45.0885212!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x654d163b84af6cc6!2sStudent%20Union%20of%20Acadia%20University!5e0!3m2!1sen!2sca!4v1625756708936!5m2!1sen!2sca\" width=\"400\" height=\"190\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
       "website": "http://theasu.ca/services.html",
       "leaf": "green"
     },
     {
       "id": 4,
       "name": "Counselling Centre",
-      "description": "This is.. You can email at counselling@acadiau.ca",
+      "description": "This is the counselling place at Acadia University. You can email them at counselling@acadiau.ca",
       "latitude": "45.0889940",
       "longitude": "-64.3664147",
       "image" : null,
@@ -36,7 +36,7 @@
     {
       "id": 5,
       "name": "NS Mental Health Crisis Line",
-      "description": "This is for when you need help now! Phone number: 1-888-429-8167",
+      "description": "This is a crisis line for anyone in Nova Scotia. Phone number: 1-888-429-8167",
       "image" : null,
       "maplink": "",
       "website": "https://www2.acadiau.ca/student-life/health-wellness/mental-health.html",
@@ -44,7 +44,7 @@
     },{
       "id": 6,
       "name": "First Nations and Inuit Hope for Wellness Help line",
-      "description": "This is for when you need help now! Phone number: 1-855-242-3310",
+      "description": "This is a crisis line for first nations and inuit. Phone number: 1-855-242-3310",
       "image" : null,
       "maplink": "",
       "website": "https://www2.acadiau.ca/student-life/health-wellness/mental-health.html",
@@ -52,31 +52,31 @@
     },{
       "id": 7,
       "name": "Wolfville Waterfront Park",
-      "description": "This is.. ",
+      "description": "This is a park over looking the Bay of Fundy.",
       "latitude": "45.0835",
       "longitude": "-64.3655",
       "image" : null,
-      "maplink": "",
+      "maplink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2816.6534863447496!2d-64.36096348513075!3d45.09281946616919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5855a0ddaca099%3A0xb93741eaf019826a!2sWolfville%20Waterfront%20Park!5e0!3m2!1sen!2sca!4v1625756854119!5m2!1sen!2sca\" width=\"400\" height=\"190\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
       "website": "",
       "leaf": "green"
     },{
       "id": 8,
-      "name": "Kings County Rail Rail",
-      "description": "This is.. ",
+      "name": "Kings County Rail Trail",
+      "description": "This is a trail that goes across Kings County. ",
       "latitude": "45.092463",
       "longitude": "-64.359882",
       "image" : null,
-      "maplink": "",
+      "maplink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.960419626754!2d-64.3598778919564!3d45.09180509548494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5855a12708bbe9%3A0xa431acf170a09b5f!2sKings%20County%20Rail%20Trail%2C%20Nova%20Scotia!5e0!3m2!1sen!2sca!4v1625757014525!5m2!1sen!2sca\" width=\"400\" height=\"190\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
       "website": "",
       "leaf": "green"
     },{
       "id": 9,
-      "name": "Wolfville Woodlawn Trail",
-      "description": "This is.. ",
+      "name": "Wolfville Woodland Trail",
+      "description": "This is a trail that is behind Acadia. ",
       "latitude": "45.0835",
       "longitude": "-64.3666",
       "image" : null,
-      "maplink": "",
+      "maplink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5634.202747886718!2d-64.36666515767212!3d45.0837373837418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xead1022709b38c21!2sTrail%20Head%20for%20Wolfville%20Woodland%20Trail!5e0!3m2!1sen!2sca!4v1625757122406!5m2!1sen!2sca\" width=\"400\" height=\"190\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
       "website": "",
       "leaf": "green"
     },{

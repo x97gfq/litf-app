@@ -156,7 +156,11 @@
 .leaf {
   display: inline;
   float: right;
-  padding-top: 43%;
+  padding-top: 12%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100;
 }
 .v-enter { /* starting style */
   opacity: 0;
