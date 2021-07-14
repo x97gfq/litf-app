@@ -22,7 +22,7 @@
 
       <div class="leaf">
         <img
-        src = "@/assets/images/greenLeaf.png"
+        src = "@/assets/images/sugar maple leaf late autumn - Transparent.png"
         height = "50"
         width = "50"
         v-on:click="showInfo('purple')" style="cursor: pointer;"
@@ -30,7 +30,7 @@
       </div>   
       <div class="leaf">
         <img
-        src = "@/assets/images/greenLeaf.png"
+        src = "@/assets/images/northern red oak leaf autumn - Transparent.png"
         height = "50"
         width = "50"
         v-on:click="showInfo('yellow')" style="cursor: pointer;"
@@ -38,7 +38,7 @@
       </div> 
       <div class="leaf">
         <img
-        src = "@/assets/images/greenLeaf.png"
+        src = "@/assets\images\paper birch leaf spring - Transparent.png"
         height = "50"
         width = "50"
         v-on:click="showInfo('green')" style="cursor: pointer;"
