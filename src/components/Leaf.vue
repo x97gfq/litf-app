@@ -32,7 +32,7 @@
   font-size: large;
 }
 a {
-  color: black !important;
+  color: MediumPurple !important;
 }
 
 </style>
