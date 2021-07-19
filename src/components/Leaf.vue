@@ -1,39 +1,40 @@
 <template>
     <div class="leaf">
       <div class="popup">
-        <!-- This needs to be changed somthing welcoming and not clinical. -->
-        <center> Resource: {{ selectedResource.name }}<br/></center>
         
-        <div v-if="selectedResource.website != ''">
-         <center>Website: 
-          <a :href="selectedResource.website" target="new">
-            {{ selectedResource.website }}
-          </a></center>
-        </div>
-        
+        <center> {{ selectedResource.name }}</center>
+      
         <div v-if="selectedResource.description != ''">
-          <center><a>{{ selectedResource.description }}</a></center>
+          <center><p v-html="selectedResource.description"></p></center>
         </div>
-        
+
+        <div v-if="selectedResource.phonenumber != ''">
+          <p v-html="selectedResource.phonenumber"></p>
+        </div>
+
+        <div v-if="selectedResource.website != ''">
+         <center><a href="selectedResource.website" target="new"> {{ selectedResource.website }}</a></center>
+        </div>
+
         <div v-if="selectedResource.maplink != ''">
           <center><p v-html="selectedResource.maplink"></p></center>
         </div>
-
       </div>
     </div>
 </template>
 
 <style scoped>
 .leaf {
-  color: black;
+  color: black !important;
   padding: 20px;
   background: rgb(217, 219, 120);
   height: 100%;
   font-size: large;
 }
 a {
-  color: black;
+  color: black !important;
 }
+
 </style>
 
 <script>

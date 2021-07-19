@@ -23,7 +23,7 @@
       "leaf": "green"
     },
     {
-      "id": 1,
+      "id": 3,
       "name": "Irving Centre",
       "description": "This is a place to go and relax",
       "latitude": "45.0874934",
@@ -42,26 +42,18 @@
       "image" : null,
       "maplink": "",
       "website": "https://www2.acadiau.ca/student-life/health-wellness/mental-health.html",
-      "leaf": "purple"
+      "leaf": "yellow"
     },
     {
       "id": 5,
-      "name": "NS Mental Health Crisis Line",
-      "description": "This is a crisis line for anyone in Nova Scotia. Phone number: 1-888-429-8167",
+      "name": "Crisis Help lines",
+      "phonenumber": "- NS Mental Health Crisis Line <a style=color:style=color:LightBluestyle=color:LightBlueBlue href='tel:18884298167'>1-888-429-8167</a> <br> - First Nations and Inuit Hope for Wellness Help line <a style=color:DarkBlue href='tel:18552423310'>1-855-242-3310</a>",
       "image" : null,
       "maplink": "",
       "website": "https://www2.acadiau.ca/student-life/health-wellness/mental-health.html",
       "leaf": "purple" 
     },{
       "id": 6,
-      "name": "First Nations and Inuit Hope for Wellness Help line",
-      "description": "This is a crisis line for first nations and inuit. Phone number: 1-855-242-3310",
-      "image" : null,
-      "maplink": "",
-      "website": "https://www2.acadiau.ca/student-life/health-wellness/mental-health.html",
-      "leaf": "purple"
-    },{
-      "id": 7,
       "name": "Wolfville Waterfront Park",
       "description": "This is a park over looking the Bay of Fundy.",
       "latitude": "45.0835",
@@ -71,7 +63,7 @@
       "website": "",
       "leaf": "green"
     },{
-      "id": 8,
+      "id": 7,
       "name": "Kings County Rail Trail",
       "description": "This is a trail that goes across Kings County. ",
       "latitude": "45.092463",
@@ -81,7 +73,7 @@
       "website": "",
       "leaf": "green"
     },{
-      "id": 9,
+      "id": 8,
       "name": "Wolfville Woodland Trail",
       "description": "This is a trail that is behind Acadia. ",
       "latitude": "45.0835",
@@ -91,7 +83,7 @@
       "website": "",
       "leaf": "green"
     },{
-      "id": 10,
+      "id": 9,
       "name": "Yellow Place holder",
       "description": "This is.. ",
       "latitude": "45.0835",
