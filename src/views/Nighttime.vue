@@ -5,7 +5,7 @@
       <div v-if="checkIfDone" class="checkIfDone">
           <div class="alert alert-success" role="alert">
               <p>
-                <b><router-link to="/Daytime" class="text-success">GO TO THE DAYTME REVEAL</router-link></b> 
+                <b><router-link to="/NighttimeReveal" class="text-success">GO TO THE NIGHTTIME REVEAL</router-link></b> 
               </p>
           </div>            
       </div>
@@ -177,8 +177,6 @@
 }
 */
 .alert {
-  font-family: Baskerville;
-  margin-top: 200px;
 }
 </style>
 
@@ -229,9 +227,7 @@ export default {
     showAnimal(animal) {
       animal.eye_state = 'open';
       console.log('show animal: ' + animal.name);
-      //transition to animal page
       this.$parent.showModal(animal);
-      //setTimeout(() => this.$router.push({ name: 'Animal', params: { animal: animal } }), 250);
     },
     getAnimals () {
       this.animals = this.$store.getters.getAnimalList;
