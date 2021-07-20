@@ -36,11 +36,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/lastpage',
-    name: 'Lastpage',
-    component: () => import(/* webpackChunkName: "lastpage" */ '../views/Lastpage.vue')
-  },
-  {
     path: '/instructions',
     name: 'Instructions',
     component: () => import(/* webpackChunkName: "instructions" */ '../views/Instructions.vue')
@@ -63,17 +58,6 @@ const routes = [
     path: '/sponsors',
     name: 'Sponsors',
     component: () => import(/* webpackChunkName: "Sponsors" */ '../views/Sponsors.vue')
-  },
-  {
-    path: '/cutscene',
-    name: 'Cutscene',
-    component: () => import(/* webpackChunkName: "Test" */ '../views/Cutscene.vue')
-  }, 
-  {
-    path: '/jamie',
-    name: 'Jamie',
-    component: () => import('../views/Jamie.vue')
-
   },
   {
     path: '/animal',
